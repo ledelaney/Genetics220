@@ -1,0 +1,44 @@
+---
+title: "Tips on Navigating Blackboard"
+output:
+  html_document:
+    theme: cosmo
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Most of the materials you will use throughout the course are located on Blackboard. This guide should help you navigate to these easily. The majority of links are found in the navigation panel on the lefthand side of your Blackboard screen when you are inside the BIOS220 course, unless otherwise noted. You may also click on the links within this document.
+
+**Note: you will need to login to Blackboard to use the links below.**
+
+## Lecture Materials
+Lectures and lecture notes will be posted every Monday and Wednesday, but are available until the end of the semester. You may refer to these videos as often as you like. iClicker quizzes associated with the lecture are only available for a 24 hour period after the lecture is posted, beginning at 8am. (For example, the iClicker quiz for Monday's lecture will be available from 8am Monday - 8am Tuesday.)
+
+### Lecture videos
+Lecture videos can be found under [Panopto video](https://uic.blackboard.com/webapps/blackboard/content/launchLink.jsp?course_id=_158614_1&tool_id=_4898_1&tool_type=TOOL&mode=cpview&mode=reset). 
+
+### Lecture notes
+Lecture notes are available under [3pm Class Materials](https://uic.blackboard.com/webapps/blackboard/content/listContentEditable.jsp?content_id=_7104105_1&course_id=_158614_1&mode=reset). Navigate to [Morrison Lecture Notes](https://uic.blackboard.com/webapps/blackboard/content/listContentEditable.jsp?content_id=_7198881_1&course_id=_158614_1). You can see Dr. McCutcheon's lecture notes under [McCutcheon Lecture Notes](https://uic.blackboard.com/webapps/blackboard/content/listContentEditable.jsp?content_id=_7198879_1&course_id=_158614_1). 
+
+### Associated iClicker quizzes
+
+iClicker quizzes are found under [Online iClickers](https://uic.blackboard.com/webapps/blackboard/content/listContentEditable.jsp?content_id=_7267021_1&course_id=_158614_1&mode=reset). These are only available for a 24 hour period beginning at 8am Monday and/or 8am Wednesday.
+
+
+## Blackboard Problem Sets and Answer Keys
+
+Each week, you will complete textbook problems **and** a Blackboard problem set for homework. These problem sets are composed of recent exam questions. As such, they are a great way for you to gain familiarity with the material and how such material may be asked about in your exams. 
+
+The Blackboard problem sets are available under [Quizzes and Blackboard Homework Questions](https://uic.blackboard.com/webapps/blackboard/content/listContentEditable.jsp?content_id=_7104108_1&course_id=_158614_1&mode=reset). Navigate to [Blackboard Homework Questions (Problem Sets)](https://uic.blackboard.com/webapps/blackboard/content/listContentEditable.jsp?content_id=_7104223_1&course_id=_158614_1). These become available on Monday at 3p, and are due Friday of the same week. 
+
+## Quizzes
+
+Each week after discussion, you will take a quiz. It will be available for 10 minutes, from 3:40p-350p. Once you begin, you will have either 10 or 15 minutes to complete it, depending on the length of that particular quiz. Your grade will be available to view on Monday morning at 8am.
+
+Quizzes are also available under [Quizzes and Blackboard Homework Questions](https://uic.blackboard.com/webapps/blackboard/content/listContentEditable.jsp?content_id=_7104108_1&course_id=_158614_1&mode=reset).
+
+To view your quiz once grades are posted, hover over your grade on Blackboard, click the arrow, and select "View Grade Details".
+
