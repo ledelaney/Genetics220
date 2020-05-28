@@ -21,3 +21,9 @@ Welcome to Summer 2020 BIOS 220! Here you will find a variety of materials relev
 
 
 @include-section["01-discussion.scrbl"]
+@;include-section["02-discussion.scrbl"]
+@;include-section["03-discussion.scrbl"]
+@;include-section["04-discussion.scrbl"]
+@;include-section["05-discussion.scrbl"]
+@;include-section["06-discussion.scrbl"]
+@;include-section["07-discussion.scrbl"]

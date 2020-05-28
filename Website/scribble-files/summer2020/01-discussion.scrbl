@@ -5,12 +5,12 @@
 
 @bold{Chapters 1 and 2}
 
-In this chapter, you will learn (1) the key differences between RNA and DNA, and (2) how RNA serves as an intermediary between DNA and the protein processesing machinery.
+In these chapters, you will learn the basics of Mendel's laws, dominance relationships between alleles, meiosis & mitosois, sex linkage, and pedigrees.
 
 @section{Discussion Materials & Keys}
 
-@bold{Discussion notes:} @hyperlink["https://uic.blackboard.com/bbcswebdav/xid-84217411_1"]{[Blank]} | @hyperlink["https://uic.blackboard.com/bbcswebdav/xid-84184413_1"]{[Annotated]}
+@bold{Discussion notes:} @hyperlink["link"]{@emojize{:soon:}[Blank]} | @hyperlink["link"]{@emojize{:soon:}[Annotated]}
 
-@bold{Annotated keys:} @hyperlink["https://uic.blackboard.com/bbcswebdav/xid-84180729_1"]{[Bb Problem Set 8]} | @hyperlink["https://uic.blackboard.com/bbcswebdav/xid-84180796_1"]{[Quiz 8]}
+@bold{Annotated keys:} @hyperlink["link"]{@emojize{:soon:}[Homework 1]} | @hyperlink["link"]{@emojize{:soon:}[Quiz 1]}
 
-@bold{Extra:} @hyperlink["https://www.youtube.com/watch?v=JQIwwJqF5D0"]{YouTube video} with an overview of transcription in 3D space.
+@bold{Extra:} @hyperlink["link"]{YouTube video} with an overview of the key differences between meiosis and mitosis.
