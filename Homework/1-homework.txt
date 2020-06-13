@@ -153,7 +153,7 @@ content of the organism to generate genetic diversity among the progeny.
 
 22. In what ways does the second division of meiosis differ from mitosis?
 
-Answer: As cells divide mitotically, each chromosome consists of identical sister chromatids that are separated to form genetically identical daughter cells. Although the second division of meiosis appears to be a similar process, the "sister" chromatids are likely to be different. Recombination during earlier meiotic stages has swapped regions of DNA between sister and nonsister chromosomes such that the two daughter cells of this division typically are not genetically identical.
+Answer: As cells divide mitotically, each chromosome consists of identical sister chromatids that are separated to form genetically identical daughter cells. Although the second division of meiosis ap- pears to be a similar process, the “sister” chromatids are likely to be different. Recombination during earlier meiotic stages has swapped regions of DNA between sister and nonsister chromosomes such that the two daughter cells of this division typically are not genetically identical.
 
 27. If children obtain half their genes from one parent and half from the other parent, why aren’t siblings identical?
 
