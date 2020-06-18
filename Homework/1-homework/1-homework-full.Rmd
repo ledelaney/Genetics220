@@ -202,6 +202,16 @@ Comparing the top and bottom strands, what do you notice about the relationship 
 
 ::::
 
+:::: {.landscape data-latex=""}
+
+```{r, echo=FALSE, fig.align='center', out.width="100%"}
+
+knitr::include_graphics(path = "input/mitosis-meiosis.png")
+
+```
+
+::::
+
 
 :::: {.blackbox data-latex=""}
 
@@ -233,6 +243,16 @@ Comparing the top and bottom strands, what do you notice about the relationship 
 30. Four of the following events are part of both meiosis and mitosis, but only one is meiotic. Which one? (1) chromatid formation, (2) spindle formation, (3) chromosome condensation, (4) chromo- some movement to poles, (5) synapsis
 
 `r latex.only("\\vspace{19cm}")`
+
+::::
+
+:::: {.landscape data-latex=""}
+
+```{r, echo=FALSE, fig.align='center', out.width="90%"}
+
+knitr::include_graphics(path = "input/mendel-ratio.png")
+
+```
 
 ::::
 
