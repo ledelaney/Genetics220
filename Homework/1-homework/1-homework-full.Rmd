@@ -1,0 +1,457 @@
+---
+title: "Chapters 1 & 2 Homework"
+subtitle: "Ordered by topic: DNA structure & function; mitosis & meiosis; inheritance patterns; monohybrid crosses; pedigrees"
+author: "L E Delaney"
+output:
+  pdf_document:
+      template: input/template.tex
+      keep_tex: true 
+      latex_engine: xelatex
+  html_document:
+    highlight: tango
+    theme: cosmo
+    toc: true
+    toc_float: true
+documentclass: "article"
+fontsize: 11pt
+geometry_options: margin = 1in
+linestretch: 1
+---
+```{r setup, echo=FALSE, eval=TRUE, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, out.extra = "")
+library(tidyverse)
+
+myoutput <- "latex"
+#myoutput <- "html"
+
+#For alpha lists
+alpha.list <- function(optnum = 3, opta, optb, optc, output = myoutput){
+  
+  if(output == "html"){
+    if(optnum == 3){
+   a <- paste("<ol type='a'>", 
+       "\n", 
+       "<li>",opta,"</li>", 
+       "\n", 
+       "<li>",optb,"</li>", 
+       "\n", 
+       "<li>",optc,"</li>", 
+       "\n","</ol>", sep = " ") %>%
+     noquote()}
+    else if(optnum == 2){
+         a <- paste("<ol type='a'>", 
+       "\n", 
+       "<li>",opta,"</li>", 
+       "\n", 
+       "<li>",optb,"</li>", 
+       "\n","</ol>", sep = " ") %>%
+     noquote()
+      
+    }
+   
+   return(a)
+    
+  }
+  
+  else if(output == "latex"){
+    if(optnum == 3){
+    b <- paste("\\begin{enumerate}", 
+       "\n", 
+       "\\item[a.]{",opta,"}", 
+       "\n", 
+       "\\item[b.]{",optb,"}", 
+       "\n", 
+       "\\item[c.]{",optc,"}", 
+       "\n","\\end{enumerate}", sep = " ") %>%
+      noquote()}
+    else if(optnum == 2){
+      b <- paste("\\begin{enumerate}", 
+       "\n", 
+       "\\item[a.]{",opta,"}", 
+       "\n", 
+       "\\item[b.]{",optb,"}", 
+       "\n","\\end{enumerate}", sep = " ") %>%
+      noquote()
+      
+    }
+    
+    return(b)
+  }
+  
+}
+
+latex.only <- function(mytext, output = myoutput){
+  
+  if(output == "html"){
+    return(NULL)
+  }
+  
+  else if(output == "latex"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(NULL)
+    
+  }
+}
+
+html.only <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    return(NULL)
+  }
+  
+  else if(output == "html"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(NULL)
+    
+  }
+}
+
+
+bold.fix <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\textbf{", mytext, "}") %>%
+      noquote()
+    
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0("<strong>", mytext, "</strong>") %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(mytext)
+    
+  }
+}
+
+
+```
+
+`r latex.only("\\begin{blackbox}")`
+5. Consider Figure 1-8a. `r alpha.list(opta = "What do the small blue spheres represent?", optb = "What do the brown slabs represent?", optc = "Do you agree with the analogy that DNA is structured like a ladder?")`
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="25%"}
+
+knitr::include_graphics(path = "input/figure_01_08a.jpg")
+
+```
+
+
+`r latex.only("\\vspace{11cm}")`
+
+`r latex.only("\\end{blackbox}")`
+
+
+:::: {.blackbox data-latex=""}
+
+6. In Figure 1-8b, can you tell if the number of hydrogen bonds between adenine and thymine is the same as that between cytosine and guanine? Do you think that a DNA molecule with a high content of A + T would be more stable than one with a high content of G + C?
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="25%"}
+
+knitr::include_graphics(path = "input/figure_01_08b.jpg")
+
+```
+
+`r latex.only("\\vspace{11cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+10. Below is the sequence of a single strand of a short DNA molecule. On a piece of paper, rewrite this sequence and then write the sequence of the complementary strand below it.
+
+`r latex.only("\\vspace{10mm}")`
+
+`r latex.only("\\begin{center}")`
+
+GTTCGCGGCCGCGAAC
+
+`r latex.only("\\vspace{10mm}")`
+`r latex.only("\\end{center}")`
+
+Comparing the top and bottom strands, what do you notice about the relationship between them?
+
+`r latex.only("\\vspace{17cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+12. If a DNA double helix that is 100 base pairs in length has 32 adenines, how many cytosines, guanines, and thymines must it have?
+
+`r latex.only("\\vspace{19cm}")`
+
+
+::::
+
+
+:::: {.blackbox data-latex=""}
+
+18. Name the key function of mitosis.
+
+`r latex.only("\\vspace{19cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+19. Name two key functions of meiosis.
+
+`r latex.only("\\vspace{19cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+22. In what ways does the second division of meiosis differ from mitosis?
+
+
+`r latex.only("\\vspace{19cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+30. Four of the following events are part of both meiosis and mitosis, but only one is meiotic. Which one? (1) chromatid formation, (2) spindle formation, (3) chromosome condensation, (4) chromo- some movement to poles, (5) synapsis
+
+`r latex.only("\\vspace{19cm}")`
+
+::::
+
+`r latex.only("\\begin{blackbox}")`
+
+11. Mendel studied a tall variety of pea plants with stems that are 20 cm long and a dwarf variety with stems that are only 12 cm long. `r alpha.list(optnum = 2, opta = "Under blending theory, how long would you expect the stems of first and second hybrids to be?", optb = "Under Mendelian rules, what would you expect to observe in the second-generation hybrids if all the first-generation hybrids were tall?")`
+
+`r latex.only("\\vspace{19cm}")`
+
+
+`r latex.only("\\end{blackbox}")`
+
+:::: {.blackbox data-latex=""}
+
+46. Suppose that a husband and wife are both heterozygous for a recessive allele for albinism. If they have dizygotic (two-egg) twins, what is the probability that both the twins will have the same phenotype for pigmentation?
+
+`r latex.only("\\vspace{20cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+27. If children obtain half their genes from one parent and half from the other parent, why aren’t siblings identical?
+
+`r latex.only("\\vspace{19cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+4. Figure 1-7 shows a simplified pathway for arginine synthesis in Neurospora. Suppose you have a special strain of Neurospora that makes citrulline but not arginine. Which gene(s) are likely mutant or missing in your special strain? You have a second strain of Neurospora that makes neither citrulline nor arginine but does make ornithine. Which gene(s) are mutant or missing in this strain?
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="45%"}
+
+knitr::include_graphics(path = "input/figure_01_07.jpg")
+
+```
+
+
+`r latex.only("\\vspace{17cm}")`
+
+::::
+
+
+:::: {.blackbox data-latex=""}
+1. If the white-flowered parental variety in Figure 1-3 were crossed to the first-generation hybrid plant in that figure, what types of progeny would you expect to see and in what proportions?
+
+```{r, echo=FALSE, fig.align='center', out.width="35%"}
+
+knitr::include_graphics(path = "input/figure_01_03.jpg")
+
+```
+
+`r latex.only("\\vspace{9cm}")`
+
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+3. In Table 2-1, state the recessive phenotype in each of the seven cases.
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="65%"}
+
+knitr::include_graphics(path = "input/table_02_01.jpg")
+
+```
+
+`r latex.only("\\vspace{14cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+40. In the plant _Arabidopsis thaliana_, a geneticist is interested in the development of trichomes (small projections). A large screen turns up two mutant plants (A and B) that have no trichomes, and these mutants seem to be potentially useful in studying trichome development. (If they were determined by single-gene mutations, then finding the normal and abnormal functions of these genes would be instructive.) Each plant is crossed with wild type; in both cases, the next generation (F1) had normal trichomes. When F1 plants were selfed, the resulting F2’s were as follows:
+
+`r latex.only("\\vspace{8mm}")`
+
+  - F2 from mutant A: 602 normal; 198 no trichomes 
+  - F2 from mutant B: 267 normal; 93 no trichomes
+
+`r latex.only("\\vspace{8mm}")`
+
+`r alpha.list(optnum = 2, opta = "What do these results show? Include proposed genotypes of all plants in your answer.", optb = "Under your explanation to part a, is it possible to confidently predict the F1 from crossing the original mutant A with the original mutant B? ")`
+
+
+`r latex.only("\\vspace{16cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+49. In nature, the plant _Plectritis congesta_ is dimorphic for fruit shape; that is, individual plants bear either wingless or winged fruits. Plants were collected from nature before flowering and were crossed or selfed with the following results:
+
+\
+
+| Pollination       | Winged | Wingless |
+| ----------------- | -------|  ------- |
+| Winged (selfed)   |   91   |     1    |
+| Winged (selfed)   |   90   |    30    |
+| Wingless (selfed) |    4   |    80    |
+| Winged x wingless |  161   |     0    |
+| Winged x wingless |   29   |    31    |
+| Winged x wingless |   46   |     0    |
+| Winged x winged   |   44   |     0    |
+| Winged x winged   |   24   |     0    |
+
+
+-----
+
+\
+
+| Pollination       |   Genotypes    |   Winged | Wingless |
+| ----------------- |   ---------    |  ------- |  ------- |
+| Winged (selfed)   |                |     91   |     1    |
+| Winged (selfed)   |                |     90   |    30    |
+| Wingless (selfed) |                |      4   |    80    |
+| Winged x wingless |                |    161   |     0    |
+| Winged x wingless |                |     29   |    31    |
+| Winged x wingless |                |     46   |     0    |
+| Winged x winged   |                |     44   |     0    |
+| Winged x winged   |                |     24   |     0    |
+
+`r latex.only("\\vspace{7cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+43. In the pedigree below, the black symbols represent individuals with a very rare blood disease. If you had no other information to go on, would you think it more likely that the disease was dominant or recessive? Give your reasons.
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="35%"}
+
+knitr::include_graphics(path = "input/43pedigree.jpg")
+
+```
+
+`r latex.only("\\vspace{15cm}")`
+
+::::
+
+
+:::: {.blackbox data-latex=""}
+
+13. Could the pedigree in Figure 2-31 be explained as an autosomal dominant disorder? Explain.
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="55%"}
+
+knitr::include_graphics(path = "input/figure_02_31.jpg")
+
+```
+
+`r latex.only("\\vspace{14cm}")`
+
+
+::::
+
+
+
+:::: {.blackbox data-latex=""}
+
+50. The accompanying pedigree is for a rare but relatively mild hereditary disorder of the skin.
+`r alpha.list(opta = "How is the disorder inherited? State reasons for your answer.", optb = "Give genotypes for as many individuals in the pedigree as possible. (Invent your own defined allele symbols.)", optc = "Consider the four unaffected children of parents III-4 and III-5. In all four-child progenies from parents of these genotypes, what proportion is expected to contain all unaffected children?")`
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="55%"}
+
+knitr::include_graphics(path = "input/50pedigree.jpg")
+
+```
+
+
+`r latex.only("\\vspace{9cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+53. The following pedigree was obtained for a rare kidney disease.
+`r alpha.list(optnum = 2, opta = "Deduce the inheritance of this condition, stating your reasons.", optb = "If persons 1 and 2 marry, what is the probability that their first child will have the kidney disease?")`
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="55%"}
+
+knitr::include_graphics(path = "input/53pedigree.png")
+
+```
+
+`r latex.only("\\vspace{12cm}")`
+
+::::
+
+
+:::: {.blackbox data-latex=""}
+
+61. Duchenne muscular dystrophy is sex-linked and usually affects only males. Victims of the disease become progressively weaker, starting early in life.
+`r alpha.list(opta = "What is the probability that a woman whose brother has Duchenne’s disease will have an affected child?", optb = "If your mother’s brother (your uncle) had Duchenne’s disease, what is the probability that you have received the allele?", optc = "If your father’s brother had the disease, what is the probability that you have received the allele?")`
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="55%"}
+
+knitr::include_graphics(path = "input/figure_02_31.jpg")
+
+```
+
+`r latex.only("\\vspace{12cm}")`
+
+::::
+
+
+
+
+
