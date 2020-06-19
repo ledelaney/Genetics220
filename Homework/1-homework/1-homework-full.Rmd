@@ -313,6 +313,22 @@ knitr::include_graphics(path = "input/figure_01_03.jpg")
 
 :::: {.blackbox data-latex=""}
 
+2. In the right-hand part of Figure 2-4, in the plant showing an 11:11 ratio, do you think it would be possible to find a pod with all yellow peas? All green? Explain.
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="65%"}
+
+knitr::include_graphics(path = "input/figure_02_04.jpg")
+
+```
+
+`r latex.only("\\vspace{12cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
 3. In Table 2-1, state the recessive phenotype in each of the seven cases.
 
 \
@@ -341,7 +357,7 @@ knitr::include_graphics(path = "input/table_02_01.jpg")
 `r alpha.list(optnum = 2, opta = "What do these results show? Include proposed genotypes of all plants in your answer.", optb = "Under your explanation to part a, is it possible to confidently predict the F1 from crossing the original mutant A with the original mutant B? ")`
 
 
-`r latex.only("\\vspace{16cm}")`
+`r latex.only("\\vspace{12cm}")`
 
 ::::
 
@@ -381,6 +397,19 @@ knitr::include_graphics(path = "input/table_02_01.jpg")
 `r latex.only("\\vspace{7cm}")`
 
 ::::
+
+:::: {.blackbox data-latex=""}
+
+42.
+`r alpha.list(optnum = 2, opta = "The ability to taste the chemical phenylthiocarbamide is an autosomal dominant phenotype, and the inability to taste it is recessive. If a taster woman with a nontaster father marries a taster man who had a nontaster daughter in a previous marriage, what is the probability that their first child will be: (1) a nontaster girl, (2) a taster girl, or (3) a taster boy?", optb = "What is the probability that their first two children will be tasters of either sex?")`
+
+\
+
+
+`r latex.only("\\vspace{17cm}")`
+
+::::
+
 
 :::: {.blackbox data-latex=""}
 
@@ -461,13 +490,7 @@ knitr::include_graphics(path = "input/53pedigree.png")
 
 \
 
-```{r, echo=FALSE, fig.align='center', out.width="55%"}
-
-knitr::include_graphics(path = "input/figure_02_31.jpg")
-
-```
-
-`r latex.only("\\vspace{12cm}")`
+`r latex.only("\\vspace{17cm}")`
 
 ::::
 
