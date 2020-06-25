@@ -1,0 +1,448 @@
+---
+title: "Chapters 3 & 4 Homework"
+subtitle: "Ordered by topic"
+author: "L E Delaney"
+output:
+  pdf_document:
+      template: input/template.tex
+      keep_tex: false 
+      latex_engine: xelatex
+  html_document:
+    highlight: tango
+    theme: cosmo
+    toc: true
+    toc_float: true
+documentclass: "article"
+fontsize: 11pt
+geometry_options: margin = 1in
+linestretch: 1
+---
+```{r setup, echo=FALSE, eval=TRUE, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, out.extra = "")
+library(tidyverse)
+
+myoutput <- "latex"
+#myoutput <- "html"
+
+#For alpha lists
+alpha.list <- function(optnum = 3, opta, optb, optc, optd, output = myoutput){
+  
+  if(output == "html"){
+    if(optnum == 3){
+   a <- paste("<ol type='a'>", 
+       "\n", 
+       "<li>",opta,"</li>", 
+       "\n", 
+       "<li>",optb,"</li>", 
+       "\n", 
+       "<li>",optc,"</li>", 
+       "\n","</ol>", sep = " ") %>%
+     noquote()}
+    else if(optnum == 2){
+         a <- paste("<ol type='a'>", 
+       "\n", 
+       "<li>",opta,"</li>", 
+       "\n", 
+       "<li>",optb,"</li>", 
+       "\n","</ol>", sep = " ") %>%
+     noquote()
+      
+    }
+    
+     else if(optnum == 4){
+        a <- paste("<ol type='a'>", 
+       "\n", 
+       "<li>",opta,"</li>", 
+       "\n", 
+       "<li>",optb,"</li>", 
+       "\n", 
+       "<li>",optc,"</li>",
+       "\n", 
+       "<li>",optd,"</li>",
+       "\n","</ol>", sep = " ") %>%
+             
+     noquote()
+      
+    }
+   
+   return(a)
+    
+  }
+  
+  else if(output == "latex"){
+    if(optnum == 3){
+    b <- paste("\\begin{enumerate}", 
+       "\n", 
+       "\\item[a.]{",opta,"}", 
+       "\n", 
+       "\\item[b.]{",optb,"}", 
+       "\n", 
+       "\\item[c.]{",optc,"}", 
+       "\n","\\end{enumerate}", sep = " ") %>%
+      noquote()}
+    else if(optnum == 2){
+      b <- paste("\\begin{enumerate}", 
+       "\n", 
+       "\\item[a.]{",opta,"}", 
+       "\n", 
+       "\\item[b.]{",optb,"}", 
+       "\n","\\end{enumerate}", sep = " ") %>%
+      noquote()
+      
+    }
+    
+    else if(optnum == 4){
+    b <- paste("\\begin{enumerate}", 
+       "\n", 
+       "\\item[a.]{",opta,"}", 
+       "\n", 
+       "\\item[b.]{",optb,"}", 
+       "\n", 
+       "\\item[c.]{",optc,"}", 
+       "\n", 
+       "\\item[d.]{",optd,"}", 
+       "\n","\\end{enumerate}", sep = " ") %>%
+      noquote()}
+    
+    return(b)
+  }
+  
+}
+
+latex.only <- function(mytext, output = myoutput){
+  
+  if(output == "html"){
+    return(NULL)
+  }
+  
+  else if(output == "latex"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(NULL)
+    
+  }
+}
+
+html.only <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    return(NULL)
+  }
+  
+  else if(output == "html"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(NULL)
+    
+  }
+}
+
+
+bold.fix <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\textbf{", mytext, "}") %>%
+      noquote()
+    
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0("<strong>", mytext, "</strong>") %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(mytext)
+    
+  }
+}
+
+
+```
+
+:::: {.blackbox data-latex=""}
+
+13. Normal mitosis takes place in a diploid cell of genotype _A/a ; B/b_. Which of the following genotypes might represent possible daughter cells?
+
+\
+
+a. _A;B_
+
+b. _a;b_
+
+c. _A;b_
+
+d. _a;B_
+
+e. _A/A ; B/B_ 
+
+f. _A/a ; B/b_ 
+
+g. _a/a ; b/b_
+
+
+
+`r latex.only("\\vspace{15cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+15. It has been shown that, when a thin beam of light is aimed at a nucleus, the amount of light absorbed is proportional to the cell’s DNA content. Using this method, the DNA in the nuclei of several different types of cells in a corn plant were compared. The following numbers represent the relative amounts of DNA in these different types of cells:
+
+`r latex.only("\\vspace{10mm}")`
+
+`r latex.only("\\begin{center}")`
+
+0.7, 1.4, 2.1, 2.8, and 4.2
+
+`r latex.only("\\vspace{10mm}")`
+`r latex.only("\\end{center}")`
+
+Which cells could have been used for these measurements? (Note: In plants, the endosperm part of the seed is often triploid, 3n.)
+
+`r latex.only("\\vspace{14cm}")`
+
+::::
+
+
+:::: {.blackbox data-latex=""}
+
+12. Assume independent assortment and start with a plant that is dihybrid _A/a ; B/b_. 
+`r alpha.list(optnum = 4, opta = "What phenotypic ratio is produced from selfing it?", optb = "What genotypic ratio is produced from selfing it?", optc = "What phenotypic ratio is produced from testcrossing it?", optd = "What genotypic ratio is produced from testcrossing it?")`
+
+
+`r latex.only("\\vspace{17cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+25. Look at the Punnett square in Figure 3-4. (Only part a is assigned.)
+
+`r alpha.list(optnum = 4, opta = "How many genotypes are there in the 16 squares of the grid?", optb = "What is the genotypic ratio underlying the 9:3:3:1 phenotypic ratio?", optc = "Can you devise a simple formula for the calculation of the number of progeny genotypes in dihybrid, trihybrid, and so forth crosses? Repeat for phenotypes.", optd = "Mendel predicted that, within all but one of the phenotypic classes in the Punnett square, there should be several different genotypes. In particular, he performed many crosses to identify the underlying genotypes of the round, yellow phenotype. Show two different ways that could be used to identify the various genotypes underlying the round, yellow phenotype. (Remember, all the round, yellow peas look identical.)")`
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="45%"}
+
+knitr::include_graphics(path = "input/figure_03_04.jpg")
+
+```
+
+
+`r latex.only("\\vspace{8cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+28. In dogs, dark coat color is dominant over albino and short hair is dominant over long hair. Assume that these effects are caused by two independently assorting genes. Seven crosses were done as shown below, in which D and A stand for the dark and albino phenotypes, respectively, and S and L stand for the short-hair and long-hair phenotypes.
+
+\
+
+| Parental pheno.   |   D, S   |   D, L   |   A, S   |   A, L   |
+| ----------------- | ---------|  ------- |  ------- |  ------- |
+|  D, S x D, S      |    88    |     31   |     29   |     12   |
+|  D, S x D, L      |    19    |     18   |     0    |     0    |
+|  D, S x A, S      |    21    |      0   |    20    |     0    |
+|  A, S x A, S      |     0    |      0   |    29    |     9    |
+|  D, L x D, L      |     0    |     31   |     0    |    11    |
+|  D, S x D, S      |    45    |     16   |     0    |     0    |
+|  D, S x D, L      |    31    |     30   |    10    |    10    |
+
+
+-----
+
+`r latex.only("\\vspace{12cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+30. A mutant allele in mice causes a bent tail. Six pairs of mice were crossed. Their phenotypes and those of their progeny are given in the following table. N is normal phenotype; B is bent phenotype. Deduce the mode of inheritance of this phenotype.
+
+\
+
+|       |          | PARENTS  |          | PROGENY   |
+| ----- | ---------|  ------- |  ------- |  ------- |
+| Cross |  Female  |   Male   |  Female  |   Male   |
+| ----- | ---------|  ------- |  ------- |  ------- |
+|   1   |     N    |      B   |   All B  |  All N   |
+|   2   |     B    |      N   |1/2B 1/2N |1/2B 1/2N |
+|   3   |     B    |      N   |   All B  |  All B   |
+|   4   |     N    |      N   |   All N  |  All N   |
+|   5   |     B    |      B   |   All B  |  All B   |
+|   6   |     B    |      B   |   All B  |1/2B 1/2N |
+
+`r alpha.list(optnum = 3, opta = "Is it recessive or dominant?", optb = "Is it autosomal or sex-linked?", optc = "What are the genotypes of all parents and progeny?")`
+
+-----
+
+`r latex.only("\\vspace{12cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+20. In mice, dwarfism is caused by an X-linked recessive allele, and pink coat is caused by an autosomal dominant allele (coats are normally brownish). If a dwarf female from a pure line is crossed with a pink male from a pure line, what will be the phenotypic ratios in the F1 and F2 in each sex? (Invent and define your own gene symbols.)
+
+`r latex.only("\\vspace{19cm}")`
+
+
+::::
+
+
+:::: {.blackbox data-latex=""}
+
+12. A plant of genotype
+
+\
+
+    ___A____B___
+    ___a____b___
+
+\
+
+is testcrossed with
+
+    ___a____b___
+    ___a____b___
+
+\
+
+If the two loci are 10 m.u. apart, what proportion of progeny will be _A B / a b_?
+
+`r latex.only("\\vspace{15cm}")`
+
+::::
+
+
+:::: {.blackbox data-latex=""}
+
+13. The _A_ locus and the _D_ locus are so tightly linked that no recombination is ever observed between them. If _A d / A d_ is crossed with _a D / a D_ and the F1 is intercrossed, what phenotypes will be seen in the F2 and in what proportions?
+
+`r latex.only("\\vspace{19cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+14. The _R_ and _S_ loci are 35 m.u. apart. If a plant of genotype
+
+\
+
+    ___R____S___
+    
+\
+    
+    ___r____s___
+
+\
+
+is selfed, what progeny phenotypes will be seen and in what proportions?
+
+`r latex.only("\\vspace{15cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+15. The cross _E/E · F/F_ x _e/e · f/f_ is made, and the F1 is then backcrossed with the recessive parent. The progeny genotypes are inferred from the phenotypes. The progeny genotypes, written as the gametic contributions of the heterozygous parent, are in the following proportions:
+
+\
+
+_E·F_  2/6 
+
+_E·f_  1/6 
+
+_e·F_  1/6 
+
+_e·f_  2/6
+
+\ 
+
+Explain these results.
+
+`r latex.only("\\vspace{15cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+18. If _A/A · B/B_ is crossed with _a/a · b/b_ and the F1 is testcrossed, what percentage of the testcross progeny will be _a/a · b/b_ if the two genes are **(a)** unlinked; **(b)** completely linked (no crossing over at all); **(c)** 10 m.u. apart; **(d)** 24 m.u. apart?
+
+`r latex.only("\\vspace{19cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+22. You have a Drosophila line that is homozygous for autosomal recessive alleles a, b, and c, linked in that order. You cross females of this line with males homozygous for the corresponding wild-type alleles. You then cross the F1 heterozygous males with their heterozygous sisters. You obtain the following F2 phenotypes (where letters denote recessive phenotypes and pluses denote wild-type phenotypes): 
+
+\
+
+|  offspring  |  gametes |
+|-------------| -------- |
+|    1364     |   + + +  |  
+|     365     |   a b c  |
+|      87     |   a b +  |
+|      84     |   + + c  |
+|      47     |   a + +  |
+|      44     |   + b c  |
+|       5     |   a + c  |
+|       4     |   + b +  |
+
+TOTAL: 2000
+
+\
+
+`r alpha.list(optnum = 2, opta = "What is the map distance between a and b? Between b and c? (Remember, there is no crossing over in Drosophila males.)", optb = "What is the coefficient of coincidence?")`
+
+`r latex.only("\\vspace{12cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+23. R. A. Emerson crossed two different pure-breeding lines of corn and obtained a phenotypically wild-type F1 that was heterozygous for three alleles that determine recessive phenotypes: _an_ determines anther; _br_, brachytic; and _f_, fine. He testcrossed the F1 with a tester that was homozygous recessive for the three genes and obtained these progeny phenotypes: 355 anther; 339 brachytic, fine; 88 completely wild type; 55 anther, brachytic, fine; 21 fine; 17 anther, brachytic; 2 brachytic; 2 anther, fine.
+
+\
+
+|  offspring  |  gametes |
+|-------------| -------- |
+|     339     |  + br f  |  
+|     355     |  an + +  |
+|      89     |   + + +  |
+|      55     |  an br f |
+|      21     |   + + f  |
+|      17     |  an br + |
+|       2     |  + br +  |
+|       2     |  an + f  |
+
+TOTAL: 880
+
+\
+
+`r alpha.list(optnum = 3, opta = "What were the genotypes of the parental lines?", optb = "Draw a linkage map for the three genes (include map distances).", optc = "Calculate the interference value.")`
+
+`r latex.only("\\vspace{12cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+45. A corn geneticist wants to obtain a corn plant that has the three dominant phenotypes: anthocyanin (A), long tassels (L), and dwarf plant (D). In her collection of pure lines, the only lines that bear these alleles are _AA LL dd_ and _aa ll DD_. She also has the fully recessive line _aa ll dd_. She decides to intercross the first two and testcross the resulting hybrid to obtain in the progeny 0 plant of the desired phenotype (which would have to be _Aa Ll Dd_ in this case). She knows that the three genes are linked in the order written and that the distance between the _A/a_ and the _L/l_ loci is 16 map units and that the distance between the _L/l_ and the _D/d_ loci is 24 map units.
+
+`r latex.only("\\vspace{17cm}")`
+
+::::
