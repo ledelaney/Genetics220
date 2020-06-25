@@ -443,6 +443,8 @@ TOTAL: 880
 
 45. A corn geneticist wants to obtain a corn plant that has the three dominant phenotypes: anthocyanin (A), long tassels (L), and dwarf plant (D). In her collection of pure lines, the only lines that bear these alleles are _AA LL dd_ and _aa ll DD_. She also has the fully recessive line _aa ll dd_. She decides to intercross the first two and testcross the resulting hybrid to obtain in the progeny 0 plant of the desired phenotype (which would have to be _Aa Ll Dd_ in this case). She knows that the three genes are linked in the order written and that the distance between the _A/a_ and the _L/l_ loci is 16 map units and that the distance between the _L/l_ and the _D/d_ loci is 24 map units.
 
-`r latex.only("\\vspace{17cm}")`
+`r alpha.list(optnum = 4, opta = "Draw a diagram of the chromosomes of the parents, the hybrid, and the tester.", optb = "Draw a diagram of the crossover(s) necessary to produce the desired genotype.", optc = "What percentage of the testcross progeny will be of the phenotype that she needs?", optd = "What assumptions did you make (if any)?")`
+
+`r latex.only("\\vspace{16cm}")`
 
 ::::
