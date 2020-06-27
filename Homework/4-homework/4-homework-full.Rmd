@@ -1,0 +1,414 @@
+---
+title: "Chapters 6 & 7 Homework"
+subtitle: "Ch. 6: 18, 21, 22, 60, 14, 15, 17, 44, 68; Ch.7: 6-10, 12-14, 15-17, 20, 25"
+author: "L E Delaney"
+output:
+  pdf_document:
+      template: input/template.tex
+      keep_tex: false 
+      latex_engine: xelatex
+  html_document:
+    highlight: tango
+    theme: cosmo
+    toc: true
+    toc_float: true
+documentclass: "article"
+fontsize: 11pt
+geometry_options: margin = 1in
+linestretch: 1
+---
+```{r setup, echo=FALSE, eval=TRUE, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, out.extra = "")
+library(tidyverse)
+
+myoutput <- "latex"
+#myoutput <- "html"
+
+#For alpha lists
+alpha.list <- function(optnum = 3, opta, optb, optc, optd, opte, output = myoutput){
+  
+  if(output == "html"){
+    if(optnum == 3){
+   a <- paste("<ol type='a'>", 
+       "\n", 
+       "<li>",opta,"</li>", 
+       "\n", 
+       "<li>",optb,"</li>", 
+       "\n", 
+       "<li>",optc,"</li>", 
+       "\n","</ol>", sep = " ") %>%
+     noquote()}
+    else if(optnum == 2){
+         a <- paste("<ol type='a'>", 
+       "\n", 
+       "<li>",opta,"</li>", 
+       "\n", 
+       "<li>",optb,"</li>", 
+       "\n","</ol>", sep = " ") %>%
+     noquote()
+      
+    }
+    
+     else if(optnum == 4){
+        a <- paste("<ol type='a'>", 
+       "\n", 
+       "<li>",opta,"</li>", 
+       "\n", 
+       "<li>",optb,"</li>", 
+       "\n", 
+       "<li>",optc,"</li>",
+       "\n", 
+       "<li>",optd,"</li>",
+       "\n","</ol>", sep = " ") %>%
+             
+     noquote()}
+        
+      else if(optnum == 5){
+        a <- paste("<ol type='a'>", 
+       "\n", 
+       "<li>",opta,"</li>", 
+       "\n", 
+       "<li>",optb,"</li>", 
+       "\n", 
+       "<li>",optc,"</li>",
+       "\n", 
+       "<li>",optd,"</li>",
+       "\n",
+       "<li>",opte,"</li>",
+       "\n","</ol>", sep = " ") %>%
+             
+     noquote()
+      
+    }
+   
+   return(a)
+    
+  }
+  
+  else if(output == "latex"){
+    if(optnum == 3){
+    b <- paste("\\begin{enumerate}", 
+       "\n", 
+       "\\item[a.]{",opta,"}", 
+       "\n", 
+       "\\item[b.]{",optb,"}", 
+       "\n", 
+       "\\item[c.]{",optc,"}", 
+       "\n","\\end{enumerate}", sep = " ") %>%
+      noquote()}
+    else if(optnum == 2){
+      b <- paste("\\begin{enumerate}", 
+       "\n", 
+       "\\item[a.]{",opta,"}", 
+       "\n", 
+       "\\item[b.]{",optb,"}", 
+       "\n","\\end{enumerate}", sep = " ") %>%
+      noquote()
+      
+    }
+    
+    else if(optnum == 4){
+    b <- paste("\\begin{enumerate}", 
+       "\n", 
+       "\\item[a.]{",opta,"}", 
+       "\n", 
+       "\\item[b.]{",optb,"}", 
+       "\n", 
+       "\\item[c.]{",optc,"}", 
+       "\n", 
+       "\\item[d.]{",optd,"}", 
+       "\n","\\end{enumerate}", sep = " ") %>%
+      noquote()}
+    
+  else if(optnum == 5){
+    b <- paste("\\begin{enumerate}", 
+       "\n", 
+       "\\item[a.]{",opta,"}", 
+       "\n", 
+       "\\item[b.]{",optb,"}", 
+       "\n", 
+       "\\item[c.]{",optc,"}", 
+       "\n", 
+       "\\item[d.]{",optd,"}", 
+       "\n", 
+       "\\item[e.]{",opte,"}",
+       "\n","\\end{enumerate}", sep = " ") %>%
+      noquote()}
+    
+    return(b)
+  }
+  
+}
+
+latex.only <- function(mytext, output = myoutput){
+  
+  if(output == "html"){
+    return(NULL)
+  }
+  
+  else if(output == "latex"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(NULL)
+    
+  }
+}
+
+html.only <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    return(NULL)
+  }
+  
+  else if(output == "html"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(NULL)
+    
+  }
+}
+
+
+bold.fix <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\textbf{", mytext, "}") %>%
+      noquote()
+    
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0("<strong>", mytext, "</strong>") %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(mytext)
+    
+  }
+}
+
+
+```
+
+:::: {.blackbox data-latex=""}
+
+18. If a man of blood-group AB marries a woman of blood-group A whose father was of blood-group O, to what different blood groups can this man and woman expect their children to belong?
+
+`r latex.only("\\vspace{19cm}")`
+
+::::
+
+
+:::: {.blackbox data-latex=""}
+
+21. In the multiple-allele series that determines coat color in rabbits, $c^+$ encodes agouti, $c^{ch}$ encodes chinchilla (a beige coat color), and $c^h$ encodes Himalayan. Dominance is in the order $c^+$ > $c^{ch}$ > $c^h$. In a cross of $c^+/c^{ch} \times c^{ch}/c^h$, what proportion of progeny will be chinchilla?
+
+
+`r latex.only("\\vspace{19cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+22. Black, sepia, cream, and albino are coat colors of guinea pigs. Individual animals (not necessarily from pure lines) showing these colors were intercrossed; the results are tabulated as follows, where the abbreviations A (albino), B (black), C (cream), and S (sepia) represent the following phenotypes:
+
+```{r, echo=FALSE, fig.align='center', out.width="65%"}
+
+knitr::include_graphics(path = "input/q22.png")
+
+```
+
+`r alpha.list(optnum = 2, opta = "Deduce the inheritance of these coat colors and use gene symbols of your own choosing. Show all parent and progeny genotypes.", optb = "If the black animals in crosses 7 and 8 are crossed, what progeny proportions can you predict by using your model?")`
+
+
+`r latex.only("\\vspace{12cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+60. Four homozygous recessive mutant lines of _Drosophila melanogaster_ (labeled 1 through 4) showed abnormal leg coordination, which made their walking highly erratic. These lines were intercrossed; the phenotypes of the F1 flies are shown in the following grid, in which "+" represents wild-type walking and "-" represents abnormal walking:
+
+\
+
+| Lines | 1 | 2 | 3 | 4 |
+|-------|---|---|---|---|
+|   1   | - | + | + | + |
+|   2   | + | - | - | + |
+|   3   | + | - | - | + |
+|   4   | + | + | + | - |
+
+\
+
+`r alpha.list(optnum = 5, opta = "What type of test does this analysis represent?", optb = "How many different genes were mutated in creating these four lines?", optc = "Invent wild-type and mutant symbols and write out full genotypes for all four lines and for the F1 flies.", optd = "Do these data tell us which genes are linked? If not, how could linkage be tested?", opte = "Do these data tell us the total number of genes taking part in leg coordination in this animal?")`
+
+`r latex.only("\\vspace{10cm}")`
+
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+14. In _Drosophila_, the autosomal recessive _bw_ causes a dark brown eye, and the unlinked autosomal recessive _st_ causes a bright scarlet eye. A homozygote for both genes has a white eye. Thus, we have the following correspondences between genotypes and phenotypes:
+
+\
+
+:::: {.center data-latex=""}
+
+$st^+/ st^+$ ; $bw^+ / bw^+$ = red eye (wild type) 
+
+$st^+/ st^+$ ; _bw / bw_ = brown eye
+
+_st / st_ ; $bw^+ / bw^+$ = scarlet eye
+
+_st / st_ ; _bw / bw_ = white eye
+
+::::
+
+\
+
+Construct a hypothetical biosynthetic pathway showing how the gene products interact and why the different mutant combinations have different phenotypes.
+
+`r latex.only("\\vspace{12cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+15. Several mutants are isolated, all of which require compound G for growth. The compounds (A to E) in the biosynthetic pathway to G are known, but their order in the pathway is not known. Each compound is tested for its ability to support the growth of each mutant (1 to 5). In the following table, a plus sign indicates growth and a minus sign indicates no growth.
+
+\
+
+| Lines | A | B | C | D | E | G |
+|-------|---|---|---|---|---|---|
+|   1   | - | - | - | + | - | - |
+|   2   | - | + | - | + | - | + |
+|   3   | - | - | - | - | - | + |
+|   4   | - | + | + | + | - | + |
+|   5   | + | + | + | + | - | + |
+
+
+`r alpha.list(optnum = 3, opta = "What is the order of compounds A to E in the pathway?", optb = "At which point in the pathway is each mutant blocked?", optc = "Would a heterokaryon composed of double mutants 1, 3 and 2, 4 grow on a minimal medium? Would 1, 3 and 3, 4? Would 1, 2 and 2, 4 and 1, 4?")`
+
+`r latex.only("\\vspace{10cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+17. In sweet peas, the synthesis of purple anthocyanin pigment in the petals is controlled by two genes, B and D. The pathway is:
+
+\
+
+White intermediate ---Gene B Enzyme---> blue intermediate ---Gene D Enzyme---> anthocyanin (purple)
+
+\
+
+`r alpha.list(optnum = 4, opta = "What color petals would you expect in a pure-breeding plant unable to catalyze the first reaction?", optb = "What color petals would you expect in a pure-breeding plant unable to catalyze the second reaction?", optc = "If the plants in parts a and b are crossed, what color petals will the F1 plants have?", optd = "What ratio of purple:blue:white plants would you expect in the F2?")`
+
+`r latex.only("\\vspace{14cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+44. 
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+68. 
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+6. 
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+7. 
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+8. 
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+9. 
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+10. 
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+12. 
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+13. 
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+14. 
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+15. 
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+16. 
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+17. 
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+20. 
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+25. 
+
+::::
+
+
