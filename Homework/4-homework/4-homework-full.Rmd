@@ -323,13 +323,43 @@ White intermediate ---Gene B Enzyme---> blue intermediate ---Gene D Enzyme---> a
 
 :::: {.blackbox data-latex=""}
 
-44. 
+44. The genotype _r/r_ ; _p/p_ gives fowl a single comb, _R/-_ ; _P/-_ gives a walnut comb, _r/r_ ; _P/-_ gives a pea comb, and _R/-_ ; _p/p_ gives a rose comb (see the illustrations). Assume independent assortment.
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="65%"}
+
+knitr::include_graphics(path = "input/q44.png")
+
+```
+
+`r alpha.list(optnum = 4, opta = "What comb types will appear in the F1 and in the F2 and in what proportions if single-combed birds are crossed with birds of a true-breeding walnut strain?", optb = "What are the genotypes of the parents in a walnut x rose mating from which the progeny are 3/8 rose, 3/8 walnut, 1/8 pea, and 1/8 single?", optc = "What are the genotypes of the parents in a walnut x rose mating from which all the progeny are walnut?", optd = "How many genotypes produce a walnut phenotype? Write them out.")`
+
+
+`r latex.only("\\vspace{10cm}")`
 
 ::::
 
 :::: {.blackbox data-latex=""}
 
-68. 
+68. Assume that two pigments, red and blue, mix to give the normal purple color of petunia petals. Separate biochemical pathways synthesize the two pigments, as shown in the top two rows of the accompanying diagram. "White" refers to compounds that are not pigments. (Total lack of pigment results in a white petal.) Red pigment forms from a yellow intermediate that is normally at a concentration too low to color petals.
+
+```{r, echo=FALSE, fig.align='center', out.width="65%"}
+
+knitr::include_graphics(path = "input/q68.png")
+
+```
+
+A third pathway, whose compounds do not contribute pigment to petals, normally does not affect the blue and red pathways, but, if one of its intermediates (white3) should build up in concentration, it can be converted into the yellow intermediate of the red pathway.
+
+In the diagram, the letters A through E represent enzymes; their corresponding genes, all of which are unlinked, may be symbolized by the same letters.
+
+Assume that wild-type alleles are dominant and encode enzyme function and that recessive alleles result in a lack of enzyme function. Deduce which combinations of true-breeding parental genotypes could be crossed to produce F2 progeny in the following ratios:
+
+`r alpha.list(optnum = 4, opta = "9 purple:3 green:4 blue", optb = "9 purple:3 red:3 blue:1 white", optc = "13 purple:3 blue", optd = "9 purple:3 red:3 green:1 yellow")`
+
+
+`r latex.only("\\vspace{10cm}")`
 
 ::::
 
