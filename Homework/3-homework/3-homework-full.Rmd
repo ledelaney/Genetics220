@@ -181,7 +181,7 @@ knitr::include_graphics(path = "input/figure_05_11.jpg")
 ```
 
 
-`r latex.only("\\vspace{13cm}")`
+`r latex.only("\\vspace{6cm}")`
 
 ::::
 
@@ -191,7 +191,7 @@ knitr::include_graphics(path = "input/figure_05_11.jpg")
 19. Describe the state of the F factor in an Hfr, $F^+$, and $F^-$ strain. 
 
 
-`r latex.only("\\vspace{22cm}")`
+`r latex.only("\\vspace{15cm}")`
 
 ::::
 
@@ -202,7 +202,7 @@ knitr::include_graphics(path = "input/figure_05_11.jpg")
 `r alpha.list(optnum = 2, opta = "Hfr crosses by conjugation and generalized transduction.", optb = "F' derivatives such as F' lac and specialized transduction.")`
 
 
-`r latex.only("\\vspace{19cm}")`
+`r latex.only("\\vspace{15cm}")`
 
 ::::
 
@@ -219,14 +219,14 @@ knitr::include_graphics(path = "input/figure_05_33.jpg")
 ```
 
 
-`r latex.only("\\vspace{13cm}")`
+`r latex.only("\\vspace{5cm}")`
 
 
 ::::
 
 :::: {.blackbox data-latex=""}
 
-25. _In E. coli_, four Hfr strains donate the following markers, shown in the order donated:
+24. _In E. coli_, four Hfr strains donate the following markers, shown in the order donated:
 
 \
 
@@ -246,7 +246,7 @@ Strain 4: Z M U R B
 
 All these Hfr strains are derived from the same $F^-$ strain. What is the order of these markers on the circular chromosome of the original $F^+$?
 
-`r latex.only("\\vspace{16cm}")`
+`r latex.only("\\vspace{11cm}")`
 
 ::::
 
@@ -254,7 +254,7 @@ All these Hfr strains are derived from the same $F^-$ strain. What is the order 
 
 25. You are given two strains of _E. coli_. The Hfr strain is $arg^+ ala^+ glu^+ pro^+ leu^+ T^s$; the $F^-$ strain is $arg^- ala^- glu^- pro^- leu^- T^r$. All the markers are nutritional except T, which determines sensitivity or resistance to phage T1. The order of entry is as given, with $arg^+$ entering the recipient first and $T^s$ last. You find that the $F^-$ strain dies when exposed to penicillin ($pen^s$), but the Hfr strain does not ($pen^r$). How would you locate the locus for _pen_ on the bacterial chromosome with respect to _arg, ala, glu, pro_, and _leu_? Formulate your answer in logical, well-explained steps and draw explicit diagrams where possible.
 
-`r latex.only("\\vspace{18cm}")`
+`r latex.only("\\vspace{14cm}")`
 
 ::::
 
@@ -262,7 +262,7 @@ All these Hfr strains are derived from the same $F^-$ strain. What is the order 
 
 28. A particular Hfr strain normally transmits the $pro^+$ marker as the last one in conjugation. In a cross of this strain with an $F^-$ strain, some $pro^+$ recombinants are recovered early in the mating process. When these $pro^+$ cells are mixed with $F^-$ cells, the majority of the $F^-$ cells are converted into $pro^+$ cells that also carry the F factor. Explain these results.
 
-`r latex.only("\\vspace{19cm}")`
+`r latex.only("\\vspace{15cm}")`
 
 ::::
 
@@ -273,7 +273,7 @@ All these Hfr strains are derived from the same $F^-$ strain. What is the order 
 
 \
 
-```{r, echo=FALSE, fig.align='center', out.width="85%"}
+```{r, echo=FALSE, fig.align='center', out.width="65%"}
 
 knitr::include_graphics(path = "input/q34.png")
 
@@ -281,7 +281,7 @@ knitr::include_graphics(path = "input/q34.png")
 
 `r alpha.list(optnum = 3, opta = " Draw a map of the F+ strain, indicating the positions of all genes and their distances apart in minutes.", optb = "Show the insertion point and orientation of the F plasmid in each Hfr strain.", optc = "In the use of each of these Hfr strains, state which allele you would select to obtain the highest proportion of Hfr exconjugants.")`
 
-`r latex.only("\\vspace{13cm}")`
+`r latex.only("\\vspace{9cm}")`
 
 ::::
 
@@ -305,7 +305,7 @@ knitr::include_graphics(path = "input/q34.png")
 
 `r alpha.list (optnum = 3, opta = "What are the linkage distances between m and r, between r and t, and between m and t?", optb = "Determine the linkage order for the three genes.", optc = "What is the coefficient of coincidence (see Chapter 4) in this cross? What does it signify?")`
 
-`r latex.only("\\vspace{11cm}")`
+`r latex.only("\\vspace{6cm}")`
 
 ::::
 
@@ -315,13 +315,13 @@ knitr::include_graphics(path = "input/q34.png")
 
 \
 
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
+```{r, echo=FALSE, fig.align='center', out.width="45%"}
 
 knitr::include_graphics(path = "input/problem_05_40.jpg")
 
 ```
 
-`r latex.only("\\vspace{12cm}")`
+`r latex.only("\\vspace{6cm}")`
 
 ::::
 
@@ -331,7 +331,7 @@ knitr::include_graphics(path = "input/problem_05_40.jpg")
 
 \
 
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
+```{r, echo=FALSE, fig.align='center', out.width="45%"}
 
 knitr::include_graphics(path = "input/q47.png")
 
@@ -339,7 +339,7 @@ knitr::include_graphics(path = "input/q47.png")
 
 `r alpha.list(optnum = 2, opta = "One of the genes is distant from the other three, which appear to be closely linked. Which is the distant gene?", optb = "What is the likely order of the three closely linked genes?")`
 
-`r latex.only("\\vspace{12cm}")`
+`r latex.only("\\vspace{6cm}")`
 
 ::::
 
@@ -349,14 +349,14 @@ knitr::include_graphics(path = "input/q47.png")
 
 \
 
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
+```{r, echo=FALSE, fig.align='center', out.width="45%"}
 
 knitr::include_graphics(path = "input/q50.png")
 
 ```
 
 
-`r latex.only("\\vspace{11cm}")`
+`r latex.only("\\vspace{6cm}")`
 
 ::::
 
