@@ -167,92 +167,43 @@ bold.fix <- function(mytext, output = myoutput){
   }
 }
 
+italic.fix <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\textit{", mytext, "}") %>%
+      noquote()
+    
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0("<em>", mytext, "</em>") %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(mytext)
+    
+  }
+}
+
 
 ```
 
 :::: {.blackbox data-latex=""}
 
-5. In Figure 5-11, which donor alleles become part of the recombinant genome produced?
+11. In prokaryotes and eukaryotes, describe what else is happening to the RNA while RNA polymerase is synthesizing a transcript from the DNA template.
 
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
-
-knitr::include_graphics(path = "input/figure_05_11.jpg")
-
-```
-
-
-`r latex.only("\\vspace{13cm}")`
+`r latex.only("\\vspace{18cm}")`
 
 ::::
 
 
 :::: {.blackbox data-latex=""}
 
-19. Describe the state of the F factor in an Hfr, $F^+$, and $F^-$ strain. 
+14. You have identified a mutation in yeast, a unicellular eukaryote, that prevents the capping of the 5' end of the RNA transcript. However, much to your surprise, all the enzymes required for capping are normal. You determine that the mutation is, instead, in one of the subunits of RNA polymerase II. Which subunit is mutant and how does this mutation result in failure to add a cap to yeast RNA?
 
-
-`r latex.only("\\vspace{22cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-21. With respect to gene transfer and the integration of the transferred gene into the recipient genome, compare:
-
-`r alpha.list(optnum = 2, opta = "Hfr crosses by conjugation and generalized transduction.", optb = "F' derivatives such as F' lac and specialized transduction.")`
-
-
-`r latex.only("\\vspace{19cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-17. In Figure 5-33, which is the rarest genotype produced in the initial lysate?
-
-\
-
-```{r, echo=FALSE, fig.align='center', out.width="45%"}
-
-knitr::include_graphics(path = "input/figure_05_33.jpg")
-
-```
-
-
-`r latex.only("\\vspace{13cm}")`
-
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-25. _In E. coli_, four Hfr strains donate the following markers, shown in the order donated:
-
-\
-
-`r latex.only("\\begin{center}")`
-
-Strain 1: M Z X W C 
-
-Strain 2: L A N C W 
-
-Strain 3: A L B R U 
-
-Strain 4: Z M U R B
-
-`r latex.only("\\end{center}")`
-
-\
-
-All these Hfr strains are derived from the same $F^-$ strain. What is the order of these markers on the circular chromosome of the original $F^+$?
-
-`r latex.only("\\vspace{16cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-25. You are given two strains of _E. coli_. The Hfr strain is $arg^+ ala^+ glu^+ pro^+ leu^+ T^s$; the $F^-$ strain is $arg^- ala^- glu^- pro^- leu^- T^r$. All the markers are nutritional except T, which determines sensitivity or resistance to phage T1. The order of entry is as given, with $arg^+$ entering the recipient first and $T^s$ last. You find that the $F^-$ strain dies when exposed to penicillin ($pen^s$), but the Hfr strain does not ($pen^r$). How would you locate the locus for _pen_ on the bacterial chromosome with respect to _arg, ala, glu, pro_, and _leu_? Formulate your answer in logical, well-explained steps and draw explicit diagrams where possible.
 
 `r latex.only("\\vspace{18cm}")`
 
@@ -260,103 +211,47 @@ All these Hfr strains are derived from the same $F^-$ strain. What is the order 
 
 :::: {.blackbox data-latex=""}
 
-28. A particular Hfr strain normally transmits the $pro^+$ marker as the last one in conjugation. In a cross of this strain with an $F^-$ strain, some $pro^+$ recombinants are recovered early in the mating process. When these $pro^+$ cells are mixed with $F^-$ cells, the majority of the $F^-$ cells are converted into $pro^+$ cells that also carry the F factor. Explain these results.
-
-`r latex.only("\\vspace{19cm}")`
-
-::::
+15. Why is RNA produced only from the template DNA strand and not from both strands?
 
 
-:::: {.blackbox data-latex=""}
-
-31. Five Hfr strains A through E are derived from a single $F^+$ strain of _E. coli_. The following chart shows the entry times of the first five markers into an $F^-$ strain when each is used in an interrupted-conjugation experiment:
-
-\
-
-```{r, echo=FALSE, fig.align='center', out.width="85%"}
-
-knitr::include_graphics(path = "input/q34.png")
-
-```
-
-`r alpha.list(optnum = 3, opta = " Draw a map of the F+ strain, indicating the positions of all genes and their distances apart in minutes.", optb = "Show the insertion point and orientation of the F plasmid in each Hfr strain.", optc = "In the use of each of these Hfr strains, state which allele you would select to obtain the highest proportion of Hfr exconjugants.")`
-
-`r latex.only("\\vspace{13cm}")`
-
-::::
-
-
-:::: {.blackbox data-latex=""}
-
-34. _E. coli_ cells were infected with two strains of T4 virus. One strain is minute (_m_), rapid lysis (_r_), and turbid (_t_); the other is wild type for all three markers. The lytic products of this infection were plated and classified. The resulting 10,343 plaques were distributed among eight genotypes as follows:
-
-\
-
-| Genotypes |  Plaques |
-| --------- | -------- |
-|   m r t   |   3469   |
-|   + + +   |   3727   |
-|   m r +   |    854   | 
-|   m + t   |    163   |
-|   m + +   |    521   |
-|   + r t   |    475   | 
-|   + r +   |    171   |
-|   + + t   |    963   |
-
-`r alpha.list (optnum = 3, opta = "What are the linkage distances between m and r, between r and t, and between m and t?", optb = "Determine the linkage order for the three genes.", optc = "What is the coefficient of coincidence (see Chapter 4) in this cross? What does it signify?")`
-
-`r latex.only("\\vspace{11cm}")`
+`r latex.only("\\vspace{20cm}")`
 
 ::::
 
 :::: {.blackbox data-latex=""}
 
-40. Deduce the genotypes of the following _E. coli_ strains 1 through 4:
+16. A linear plasmid contains only two genes, which are transcribed in opposite directions, each one from the end, toward the center of the plasmid. Draw diagrams of the:
 
-\
+`r alpha.list (optnum = 4, opta = "plasmid DNA, showing the 5' and 3' ends of the nucleotide strands.", optb = "template strand for each gene.", optc = "positions of the transcription-initiation site.", optd = "transcripts, showing the 5' and 3' ends.")`
 
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
+`r latex.only("\\vspace{17cm}")`
 
-knitr::include_graphics(path = "input/problem_05_40.jpg")
-
-```
-
-`r latex.only("\\vspace{12cm}")`
 
 ::::
 
 :::: {.blackbox data-latex=""}
 
-47. A bacterial transformation is performed with a donor strain that is resistant to four drugs: A, B, C, and D, and a recipient strain that is sensitive to all four drugs. The resulting recipient cell population is divided and plated on media containing various combinations of the drugs. The following table shows the results.
+20. You will learn more about genetic engineering in Chapter 10, but for now, put on your genetic engineer’s cap and try to solve this problem. _E. coli_ is widely used in laboratories to produce proteins from other organisms.
 
-\
+`r alpha.list (optnum = 2, opta = "You have isolated a yeast gene that encodes a metabolic enzyme and want to produce this enzyme in \\textit{E. coli}. You suspect that the yeast promoter will not work in \\textit{E. coli}. Why?", optb = "After replacing the yeast promoter with an \\textit{E. coli} promoter, you are pleased to detect RNA from the yeast gene but are confused because the RNA is almost twice the length of the mRNA from this gene isolated from yeast. Explain why this result might have occurred.")`
 
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
 
-knitr::include_graphics(path = "input/q47.png")
-
-```
-
-`r alpha.list(optnum = 2, opta = "One of the genes is distant from the other three, which appear to be closely linked. Which is the distant gene?", optb = "What is the likely order of the three closely linked genes?")`
-
-`r latex.only("\\vspace{12cm}")`
+`r latex.only("\\vspace{18cm}")`
 
 ::::
 
 :::: {.blackbox data-latex=""}
 
-50. A generalized transducing phage is used to transduce an $a^- b^- c^- d^- e^-$ recipient strain of _E. coli_ with an $a^+ b^+ c^+ d^+ e^+$ donor. The recipient culture is plated on various media with the results shown in the following table. (Note that $a^-$ indicates a requirement for A as a nutrient, and so forth.) What can you conclude about the linkage and order of the genes?
+21. Draw a prokaryotic gene and its RNA product. Be sure to include the promoter, transcription start site, transcription termination site, untranslated regions, and labeled 5' and 3' ends.
 
-\
-
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
-
-knitr::include_graphics(path = "input/q50.png")
-
-```
-
-
-`r latex.only("\\vspace{11cm}")`
+`r latex.only("\\vspace{20cm}")`
 
 ::::
 
+:::: {.blackbox data-latex=""}
+
+22. Draw a two-intron eukaryotic gene and its pre-mRNA and mRNA products. Be sure to include all the features of the prokaryotic gene included in your answer to Problem 19, plus the processing events required to produce the mRNA.
+
+`r latex.only("\\vspace{20cm}")`
+
+::::
