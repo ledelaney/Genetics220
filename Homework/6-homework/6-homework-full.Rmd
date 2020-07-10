@@ -172,34 +172,40 @@ bold.fix <- function(mytext, output = myoutput){
 
 :::: {.blackbox data-latex=""}
 
-5. In Figure 5-11, which donor alleles become part of the recombinant genome produced?
+12. Use the codon dictionary in Figure 9-5 to complete the following table. Assume that reading is from left to right and that the columns represent transcriptional and translational alignments.
 
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
+\
 
-knitr::include_graphics(path = "input/figure_05_11.jpg")
+```{r, echo=FALSE, fig.align='center', out.width="75%"}
+
+knitr::include_graphics(path = "input/q12.png")
 
 ```
 
+\
 
-`r latex.only("\\vspace{13cm}")`
+Label the 5' and 3' ends of DNA and RNA, as well as the amino and carboxyl ends of the protein.
+
+`r latex.only("\\vspace{12cm}")`
 
 ::::
 
 
 :::: {.blackbox data-latex=""}
 
-19. Describe the state of the F factor in an Hfr, $F^+$, and $F^-$ strain. 
+13. Consider the following segment of DNA:
 
+:::: {.center data-latex=""}
 
-`r latex.only("\\vspace{22cm}")`
+5' GCTTCCCAA 3' 
+
+3' CGAAGGGTT 5'
 
 ::::
 
-:::: {.blackbox data-latex=""}
+Assume that the top strand is the template strand used by RNA polymerase.
 
-21. With respect to gene transfer and the integration of the transferred gene into the recipient genome, compare:
-
-`r alpha.list(optnum = 2, opta = "Hfr crosses by conjugation and generalized transduction.", optb = "F' derivatives such as F' lac and specialized transduction.")`
+`r alpha.list(optnum = 4, opta = "Draw the RNA transcribed.", optb = "Label its 5' and 3' ends.", optc = "Draw the corresponding amino acid chain.", optd = "Label its amino and carboxyl ends.")`
 
 
 `r latex.only("\\vspace{19cm}")`
@@ -208,59 +214,52 @@ knitr::include_graphics(path = "input/figure_05_11.jpg")
 
 :::: {.blackbox data-latex=""}
 
-17. In Figure 5-33, which is the rarest genotype produced in the initial lysate?
+17. Which anticodon would you predict for a tRNA species carrying isoleucine? Is there more than one possible answer? If so, state any alternative answers.
 
-\
+
+`r latex.only("\\vspace{21cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+18. 
+`r alpha.list(optnum = 2, opta = "In how many cases in the genetic code would you fail to know the amino acid specified by a codon if you knew only the first two nucleotides of the codon?", optb = "In how many cases would you fail to know the first two nucleotides of the codon if you knew which amino acid is specified by it?")`
+
+
+`r latex.only("\\vspace{19cm}")`
+
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+20. If a polyribonucleotide contains equal amounts of randomly positioned adenine and uracil bases, what proportion of its triplets will encode (a) phenylalanine, (b) isoleucine, (c) leucine, and (d) tyrosine?
+
+
+`r latex.only("\\vspace{21cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+21a. You have synthesized three different messenger RNAs with bases incorporated in random sequence in the following ratios: **(a)** 1 U:5 C’s, (b) 1 A:1 C:4 U’s, (c) 1 A:1 C:1 G:1 U. In a protein-synthesizing system in vitro, indicate the identities and proportions of amino acids that will be incorporated into proteins when each of these mRNAs is tested. (Refer to Figure 9-5.)
 
 ```{r, echo=FALSE, fig.align='center', out.width="45%"}
 
-knitr::include_graphics(path = "input/figure_05_33.jpg")
+knitr::include_graphics(path = "input/figure_09_05.jpg")
 
 ```
 
-
 `r latex.only("\\vspace{13cm}")`
 
-
 ::::
 
 :::: {.blackbox data-latex=""}
 
-25. _In E. coli_, four Hfr strains donate the following markers, shown in the order donated:
+24. The enzyme tryptophan synthetase is produced in two sizes: large and small. Some mutants with no enzyme activity produced exactly the same size enzymes as the wild type. Other mutants with no activity produced just the large enzyme; still others, just the small enzyme.
 
-\
-
-`r latex.only("\\begin{center}")`
-
-Strain 1: M Z X W C 
-
-Strain 2: L A N C W 
-
-Strain 3: A L B R U 
-
-Strain 4: Z M U R B
-
-`r latex.only("\\end{center}")`
-
-\
-
-All these Hfr strains are derived from the same $F^-$ strain. What is the order of these markers on the circular chromosome of the original $F^+$?
-
-`r latex.only("\\vspace{16cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-25. You are given two strains of _E. coli_. The Hfr strain is $arg^+ ala^+ glu^+ pro^+ leu^+ T^s$; the $F^-$ strain is $arg^- ala^- glu^- pro^- leu^- T^r$. All the markers are nutritional except T, which determines sensitivity or resistance to phage T1. The order of entry is as given, with $arg^+$ entering the recipient first and $T^s$ last. You find that the $F^-$ strain dies when exposed to penicillin ($pen^s$), but the Hfr strain does not ($pen^r$). How would you locate the locus for _pen_ on the bacterial chromosome with respect to _arg, ala, glu, pro_, and _leu_? Formulate your answer in logical, well-explained steps and draw explicit diagrams where possible.
-
-`r latex.only("\\vspace{18cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-28. A particular Hfr strain normally transmits the $pro^+$ marker as the last one in conjugation. In a cross of this strain with an $F^-$ strain, some $pro^+$ recombinants are recovered early in the mating process. When these $pro^+$ cells are mixed with $F^-$ cells, the majority of the $F^-$ cells are converted into $pro^+$ cells that also carry the F factor. Explain these results.
+`r alpha.list(optnum = 2, opta = "Explain the different types of mutants at the level of protein structure.", optb = "Why do you think there were no mutants that produced no enzyme?")`
 
 `r latex.only("\\vspace{19cm}")`
 
@@ -269,94 +268,121 @@ All these Hfr strains are derived from the same $F^-$ strain. What is the order 
 
 :::: {.blackbox data-latex=""}
 
-31. Five Hfr strains A through E are derived from a single $F^+$ strain of _E. coli_. The following chart shows the entry times of the first five markers into an $F^-$ strain when each is used in an interrupted-conjugation experiment:
+27. A certain nonsense suppressor corrects a nongrowing mutant to a state that is near, but not exactly, wild type (it has abnormal growth). Suggest a possible reason why the reversion is not a full correction.
+
+
+`r latex.only("\\vspace{21cm}")`
+
+::::
+
+
+:::: {.blackbox data-latex=""}
+
+35. Explain why antibiotics that bind the large ribosomal subunit, such as erythromycin and Zithromax, do not harm us.
+
+`r latex.only("\\vspace{21cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+40. You are studying an _E. coli_ gene that specifies a protein. A part of its sequence is:
+
+\
+
+–Ala–Pro–Trp–Ser–Glu–Lys–Cys–His–
+
+\
+
+You recover a series of mutants for this gene that show no enzymatic activity. By isolating the mutant enzyme products, you find the following sequences:
+
+\
+
+Mutant 1: –Ala–Pro–Trp–Arg–Glu–Lys–Cys–His–
+
+Mutant 2: –Ala–Pro–
+
+Mutant 3: –Ala–Pro–Gly–Val–Lys–Asn–Cys–His–
+
+Mutant 4: –Ala–Pro–Trp–Phe–Phe–Thr–Cys–His–
+
+\
+
+What is the molecular basis for each mutation? What is the DNA sequence that specifies this part of the protein?
+
+`r latex.only("\\vspace{12cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+3. Why do promoter mutations cluster at positions –10 and –35 as shown in Figure 11-11?
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="75%"}
+
+knitr::include_graphics(path = "input/figure_11_11.jpg")
+
+```
+
+`r latex.only("\\vspace{15cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+8. Explain why $I^-$ alleles in the lac system are normally recessive to $I^+$ alleles and why $I^+$ alleles are
+recessive to $I^S$ alleles.
+
+
+`r latex.only("\\vspace{20cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+9. What do we mean when we say that $O^C$ mutations in the _lac_ system are cis-acting?
+
+
+`r latex.only("\\vspace{20cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+11. The map of the lac operon is POZY.
+
+The promoter (_P_) region is the start site of transcription through the binding of the RNA polymerase molecule before actual mRNA production. Mutationally altered promoters ($P^-$) apparently cannot bind the RNA polymerase molecule. Certain predictions can be made about the effect of P– mutations. Use your predictions and your knowledge of the lactose system to complete the following table. Insert a "+" where an enzyme is produced and a "–" where no enzyme is produced. The first one has been done as an example.
 
 \
 
 ```{r, echo=FALSE, fig.align='center', out.width="85%"}
 
-knitr::include_graphics(path = "input/q34.png")
-
-```
-
-`r alpha.list(optnum = 3, opta = " Draw a map of the F+ strain, indicating the positions of all genes and their distances apart in minutes.", optb = "Show the insertion point and orientation of the F plasmid in each Hfr strain.", optc = "In the use of each of these Hfr strains, state which allele you would select to obtain the highest proportion of Hfr exconjugants.")`
-
-`r latex.only("\\vspace{13cm}")`
-
-::::
-
-
-:::: {.blackbox data-latex=""}
-
-34. _E. coli_ cells were infected with two strains of T4 virus. One strain is minute (_m_), rapid lysis (_r_), and turbid (_t_); the other is wild type for all three markers. The lytic products of this infection were plated and classified. The resulting 10,343 plaques were distributed among eight genotypes as follows:
-
-\
-
-| Genotypes |  Plaques |
-| --------- | -------- |
-|   m r t   |   3469   |
-|   + + +   |   3727   |
-|   m r +   |    854   | 
-|   m + t   |    163   |
-|   m + +   |    521   |
-|   + r t   |    475   | 
-|   + r +   |    171   |
-|   + + t   |    963   |
-
-`r alpha.list (optnum = 3, opta = "What are the linkage distances between m and r, between r and t, and between m and t?", optb = "Determine the linkage order for the three genes.", optc = "What is the coefficient of coincidence (see Chapter 4) in this cross? What does it signify?")`
-
-`r latex.only("\\vspace{11cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-40. Deduce the genotypes of the following _E. coli_ strains 1 through 4:
-
-\
-
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
-
-knitr::include_graphics(path = "input/problem_05_40.jpg")
-
-```
-
-`r latex.only("\\vspace{12cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-47. A bacterial transformation is performed with a donor strain that is resistant to four drugs: A, B, C, and D, and a recipient strain that is sensitive to all four drugs. The resulting recipient cell population is divided and plated on media containing various combinations of the drugs. The following table shows the results.
-
-\
-
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
-
-knitr::include_graphics(path = "input/q47.png")
-
-```
-
-`r alpha.list(optnum = 2, opta = "One of the genes is distant from the other three, which appear to be closely linked. Which is the distant gene?", optb = "What is the likely order of the three closely linked genes?")`
-
-`r latex.only("\\vspace{12cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-50. A generalized transducing phage is used to transduce an $a^- b^- c^- d^- e^-$ recipient strain of _E. coli_ with an $a^+ b^+ c^+ d^+ e^+$ donor. The recipient culture is plated on various media with the results shown in the following table. (Note that $a^-$ indicates a requirement for A as a nutrient, and so forth.) What can you conclude about the linkage and order of the genes?
-
-\
-
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
-
-knitr::include_graphics(path = "input/q50.png")
+knitr::include_graphics(path = "input/q11.png")
 
 ```
 
 
 `r latex.only("\\vspace{11cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+13. Mutants that are $lacY^-$ retain the capacity to synthesize $\beta$-galactosidase. However, even though the _lacI_ gene is still intact, $\beta$-galactosidase can no longer be induced by adding lactose to the medium. Explain.
+
+
+`r latex.only("\\vspace{17cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+21. You are studying the properties of a new kind of regulatory mutation of the lactose operon. This mutation, called _S_, leads to the complete repression of the _lacZ_, _lacY_, and _lacA_ genes, regardless of whether inducer (lactose) is present. The results of studies of this mutation in partial diploids demonstrate that this mutation is completely dominant over wild type. When you treat bacteria of the _S_ mutant strain with a mutagen and select for mutant bacteria that can express the enzymes encoded by _lacZ_, _lacY_, and _lacA_ genes in the presence of lactose, some of the mutations map to the _lac_ operator region and others to the _lac_ repressor gene. On the basis of your knowledge of the lactose operon, provide a molecular genetic explanation for all these properties of the _S_ mutation. Include an explanation of the constitutive nature of the "reverse mutations."
+
+
+`r latex.only("\\vspace{17cm}")`
 
 ::::
 
