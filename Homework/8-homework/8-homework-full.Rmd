@@ -172,34 +172,28 @@ bold.fix <- function(mytext, output = myoutput){
 
 :::: {.blackbox data-latex=""}
 
-5. In Figure 5-11, which donor alleles become part of the recombinant genome produced?
-
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
-
-knitr::include_graphics(path = "input/figure_05_11.jpg")
-
-```
+8. Consider the following wild-type and mutant sequences:
 
 
-`r latex.only("\\vspace{13cm}")`
+:::: {.center data-latex=""}
+
+Wild-type ....CTTGCAAGCGAATC.... 
+
+Mutant ....CTTGCTAGCGAATC....
+
+::::
+
+The substitution shown seems to have created a stop codon. What further information do you need
+to be confident that it has done so?
+
+`r latex.only("\\vspace{17cm}")`
 
 ::::
 
 
 :::: {.blackbox data-latex=""}
 
-19. Describe the state of the F factor in an Hfr, $F^+$, and $F^-$ strain. 
-
-
-`r latex.only("\\vspace{22cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-21. With respect to gene transfer and the integration of the transferred gene into the recipient genome, compare:
-
-`r alpha.list(optnum = 2, opta = "Hfr crosses by conjugation and generalized transduction.", optb = "F' derivatives such as F' lac and specialized transduction.")`
+11. By base-pair substitution, what are all the synonymous changes that can be made starting with the codon CGG?
 
 
 `r latex.only("\\vspace{19cm}")`
@@ -208,155 +202,66 @@ knitr::include_graphics(path = "input/figure_05_11.jpg")
 
 :::: {.blackbox data-latex=""}
 
-17. In Figure 5-33, which is the rarest genotype produced in the initial lysate?
-
-\
-
-```{r, echo=FALSE, fig.align='center', out.width="45%"}
-
-knitr::include_graphics(path = "input/figure_05_33.jpg")
-
-```
-
-
-`r latex.only("\\vspace{13cm}")`
-
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-25. _In E. coli_, four Hfr strains donate the following markers, shown in the order donated:
-
-\
-
-`r latex.only("\\begin{center}")`
-
-Strain 1: M Z X W C 
-
-Strain 2: L A N C W 
-
-Strain 3: A L B R U 
-
-Strain 4: Z M U R B
-
-`r latex.only("\\end{center}")`
-
-\
-
-All these Hfr strains are derived from the same $F^-$ strain. What is the order of these markers on the circular chromosome of the original $F^+$?
-
-`r latex.only("\\vspace{16cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-25. You are given two strains of _E. coli_. The Hfr strain is $arg^+ ala^+ glu^+ pro^+ leu^+ T^s$; the $F^-$ strain is $arg^- ala^- glu^- pro^- leu^- T^r$. All the markers are nutritional except T, which determines sensitivity or resistance to phage T1. The order of entry is as given, with $arg^+$ entering the recipient first and $T^s$ last. You find that the $F^-$ strain dies when exposed to penicillin ($pen^s$), but the Hfr strain does not ($pen^r$). How would you locate the locus for _pen_ on the bacterial chromosome with respect to _arg, ala, glu, pro_, and _leu_? Formulate your answer in logical, well-explained steps and draw explicit diagrams where possible.
-
-`r latex.only("\\vspace{18cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-28. A particular Hfr strain normally transmits the $pro^+$ marker as the last one in conjugation. In a cross of this strain with an $F^-$ strain, some $pro^+$ recombinants are recovered early in the mating process. When these $pro^+$ cells are mixed with $F^-$ cells, the majority of the $F^-$ cells are converted into $pro^+$ cells that also carry the F factor. Explain these results.
+13. 
+`r alpha.list(optnum = 2, opta = "Acridine orange is an effective mutagen for producing null alleles by mutation. Why does it produce null alleles?", optb = "A certain acridine-like compound generates only single insertions. A mutation induced with this compound is treated with the same compound, and some revertants are produced. How is this outcome possible?")`
 
 `r latex.only("\\vspace{19cm}")`
 
 ::::
 
-
 :::: {.blackbox data-latex=""}
 
-31. Five Hfr strains A through E are derived from a single $F^+$ strain of _E. coli_. The following chart shows the entry times of the first five markers into an $F^-$ strain when each is used in an interrupted-conjugation experiment:
+21. Differentiate between the elements of the following pairs: 
 
-\
+a. Transitions and transversions
 
-```{r, echo=FALSE, fig.align='center', out.width="85%"}
+b. Synonymous and neutral mutations
 
-knitr::include_graphics(path = "input/q34.png")
+c. Missense and nonsense mutations
 
-```
-
-`r alpha.list(optnum = 3, opta = " Draw a map of the F+ strain, indicating the positions of all genes and their distances apart in minutes.", optb = "Show the insertion point and orientation of the F plasmid in each Hfr strain.", optc = "In the use of each of these Hfr strains, state which allele you would select to obtain the highest proportion of Hfr exconjugants.")`
-
-`r latex.only("\\vspace{13cm}")`
-
-::::
+d. Frameshift and nonsense mutations
 
 
-:::: {.blackbox data-latex=""}
+`r latex.only("\\vspace{19cm}")`
 
-34. _E. coli_ cells were infected with two strains of T4 virus. One strain is minute (_m_), rapid lysis (_r_), and turbid (_t_); the other is wild type for all three markers. The lytic products of this infection were plated and classified. The resulting 10,343 plaques were distributed among eight genotypes as follows:
-
-\
-
-| Genotypes |  Plaques |
-| --------- | -------- |
-|   m r t   |   3469   |
-|   + + +   |   3727   |
-|   m r +   |    854   | 
-|   m + t   |    163   |
-|   m + +   |    521   |
-|   + r t   |    475   | 
-|   + r +   |    171   |
-|   + + t   |    963   |
-
-`r alpha.list (optnum = 3, opta = "What are the linkage distances between m and r, between r and t, and between m and t?", optb = "Determine the linkage order for the three genes.", optc = "What is the coefficient of coincidence (see Chapter 4) in this cross? What does it signify?")`
-
-`r latex.only("\\vspace{11cm}")`
 
 ::::
 
 :::: {.blackbox data-latex=""}
 
-40. Deduce the genotypes of the following _E. coli_ strains 1 through 4:
+25. A certain compound that is an analog of the base cytosine can become incorporated into DNA. It normally hydrogen bonds just as cytosine does, but it quite often isomerizes to a form that hydrogen bonds as thymine does. Do you expect this compound to be mutagenic, and, if so, what types of changes might it induce at the DNA level?
 
-\
 
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
-
-knitr::include_graphics(path = "input/problem_05_40.jpg")
-
-```
-
-`r latex.only("\\vspace{12cm}")`
+`r latex.only("\\vspace{20cm}")`
 
 ::::
 
 :::: {.blackbox data-latex=""}
 
-47. A bacterial transformation is performed with a donor strain that is resistant to four drugs: A, B, C, and D, and a recipient strain that is sensitive to all four drugs. The resulting recipient cell population is divided and plated on media containing various combinations of the drugs. The following table shows the results.
+36. You are working with a newly discovered mutagen, and you wish to determine the base change that it introduces into DNA. Thus far, you have determined that the mutagen chemically alters a single base in such a way that its base-pairing properties are altered permanently. To determine the specificity of the alteration, you examine the amino acid changes that take place after mutagenesis. A sample of what you find is shown here:
 
-\
 
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
+:::: {.center data-latex=""}
 
-knitr::include_graphics(path = "input/q47.png")
+Original: Gln–His–Ile–Glu–Lys
 
-```
+Mutant: Gln–His–Met–Glu–Lys
 
-`r alpha.list(optnum = 2, opta = "One of the genes is distant from the other three, which appear to be closely linked. Which is the distant gene?", optb = "What is the likely order of the three closely linked genes?")`
+Original: Ala–Val–Asn–Arg
 
-`r latex.only("\\vspace{12cm}")`
+Mutant: Ala–Val–Ser–Arg
+
+Original: Arg–Ser–Leu
+
+Mutant:Arg–Ser–Leu–Trp–Lys–Thr–Phe 
 
 ::::
 
-:::: {.blackbox data-latex=""}
-
-50. A generalized transducing phage is used to transduce an $a^- b^- c^- d^- e^-$ recipient strain of _E. coli_ with an $a^+ b^+ c^+ d^+ e^+$ donor. The recipient culture is plated on various media with the results shown in the following table. (Note that $a^-$ indicates a requirement for A as a nutrient, and so forth.) What can you conclude about the linkage and order of the genes?
-
 \
 
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
+What is the base-change specificity of the mutagen?
 
-knitr::include_graphics(path = "input/q50.png")
-
-```
-
-
-`r latex.only("\\vspace{11cm}")`
+`r latex.only("\\vspace{15cm}")`
 
 ::::
 

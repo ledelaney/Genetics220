@@ -172,34 +172,145 @@ bold.fix <- function(mytext, output = myoutput){
 
 :::: {.blackbox data-latex=""}
 
-5. In Figure 5-11, which donor alleles become part of the recombinant genome produced?
+2. Based on the information in Figure 12-6, how does Gal4 regulate four different _GAL_ genes at the same time? Contrast this mechanism with how the Lac repressor controls the expression of three genes.
 
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
+```{r, echo=FALSE, fig.align='center', out.width="75%"}
 
-knitr::include_graphics(path = "input/figure_05_11.jpg")
+knitr::include_graphics(path = "input/figure_12_06.jpg")
 
 ```
 
 
-`r latex.only("\\vspace{13cm}")`
+`r latex.only("\\vspace{14cm}")`
 
 ::::
 
 
 :::: {.blackbox data-latex=""}
 
-19. Describe the state of the F factor in an Hfr, $F^+$, and $F^-$ strain. 
+3. In any experiment, controls are essential in order to determine the specific effect of changing some parameter. In Figure 12-7, which constructs are the "controls" that serve to establish the principle that activation domains are modular and interchangeable?
+
+```{r, echo=FALSE, fig.align='center', out.width="45%"}
+
+knitr::include_graphics(path = "input/figure_12_07.jpg")
+
+```
 
 
-`r latex.only("\\vspace{22cm}")`
+`r latex.only("\\vspace{9cm}")`
 
 ::::
 
 :::: {.blackbox data-latex=""}
 
-21. With respect to gene transfer and the integration of the transferred gene into the recipient genome, compare:
+6. What is the conceptual connection between Figures 12-12 and 12-19?
 
-`r alpha.list(optnum = 2, opta = "Hfr crosses by conjugation and generalized transduction.", optb = "F' derivatives such as F' lac and specialized transduction.")`
+```{r, echo=FALSE, fig.show = "hold", out.width = "25%", fig.align = "default"}
+
+knitr::include_graphics(path = "input/figure_12_12.jpg")
+
+knitr::include_graphics(path = "input/figure_12_19.jpg")
+
+```
+
+
+`r latex.only("\\vspace{11cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+7. In Figure 12-19, where is the TATA box located before the enhanceosome forms at the top of the figure?
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="35%"}
+
+knitr::include_graphics(path = "input/figure_12_19.jpg")
+
+```
+
+
+`r latex.only("\\vspace{9cm}")`
+
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+13. Predict and explain the effect on GAL1 transcription, in the presence of galactose alone, of the following mutations:
+
+a. Deletion of one Gal4-binding site in the GAL1 UAS element
+
+b. Deletion of all four Gal4-binding sites in the GAL1 UAS element
+
+c. Deletion of the Mig1-binding site upstream of GAL1 d. Deletion of the Gal4 activation domain.
+
+e. Deletion of the GAL80 gene
+
+f. Deletion of the GAL1 promoter
+
+g. Deletion of the GAL3 gene
+
+\
+
+`r latex.only("\\vspace{17cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+19. What is meant by the term _epigenetic inheritance_? What are two examples of such inheritance?
+
+`r latex.only("\\vspace{19cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+24. What is the fundamental difference in how bacterial and eukaryotic genes are regulated?
+
+`r latex.only("\\vspace{21cm}")`
+
+::::
+
+
+:::: {.blackbox data-latex=""}
+
+36. Null alleles (mutant genes) produce no protein product. This is a genetic change. However, epigenetically silenced genes also produce no protein product. How does one determine experimentally whether a gene has been silenced by mutation or has been silenced epigenetically?
+
+`r latex.only("\\vspace{19cm}")`
+
+::::
+
+
+:::: {.blackbox data-latex=""}
+
+14. Why is ligase needed to make recombinant DNA? What would be the immediate consequence in the cloning process if someone forgot to add it?
+
+`r latex.only("\\vspace{20cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+15. In the PCR process, if we assume that each cycle takes 5 minutes, how many-fold amplification would be accomplished in 1 hour?
+
+`r latex.only("\\vspace{20cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+17. You obtain the DNA sequence of a mutant of a 2-kb gene in which you are interested and it shows base differences at three positions, all in different codons. One is a silent change, but the other two are missense changes (they encode new amino acids). How would you demonstrate that these changes are real mutations and not sequencing errors? (Assume that sequencing is about 99.9 percent accurate.)
+
+`r latex.only("\\vspace{19cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+18. In a T-DNA transformation of a plant with a transgene from a fungus (not found in plants), the presumptive transgenic plant does not express the expected phenotype of the transgene. How would you demonstrate that the transgene is in fact present? How would you demonstrate that the transgene was expressed?
 
 
 `r latex.only("\\vspace{19cm}")`
@@ -208,51 +319,51 @@ knitr::include_graphics(path = "input/figure_05_11.jpg")
 
 :::: {.blackbox data-latex=""}
 
-17. In Figure 5-33, which is the rarest genotype produced in the initial lysate?
+25. In yeast, you have sequenced a piece of wild-type DNA and it clearly contains a gene, but you do not know what gene it is. Therefore, to investigate further, you would like to find out its mutant phenotype. How would you use the cloned wild-type gene to do so? Show your experimental steps clearly.
+
+`r latex.only("\\vspace{19cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+32. A cloned fragment of DNA was sequenced by using the dideoxy chain-termination method. A part of the autoradiogram of the sequencing gel is represented here.
 
 \
 
 ```{r, echo=FALSE, fig.align='center', out.width="45%"}
 
-knitr::include_graphics(path = "input/figure_05_33.jpg")
+knitr::include_graphics(path = "input/problem_10_32.jpg")
 
 ```
 
+`r alpha.list(optnum = 3, opta = "Deduce the nucleotide sequence of the DNA nucleotide chain synthesized from the primer. Label the 5' and 3' ends.", optb = "Deduce the nucleotide sequence of the DNA nucleotide chain used as the template strand. Label the 5' and 3' ends.", optc = "Write out the nucleotide sequence of the DNA double helix (label the 5' and 3' ends).")`
 
-`r latex.only("\\vspace{13cm}")`
-
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-25. _In E. coli_, four Hfr strains donate the following markers, shown in the order donated:
-
-\
-
-`r latex.only("\\begin{center}")`
-
-Strain 1: M Z X W C 
-
-Strain 2: L A N C W 
-
-Strain 3: A L B R U 
-
-Strain 4: Z M U R B
-
-`r latex.only("\\end{center}")`
-
-\
-
-All these Hfr strains are derived from the same $F^-$ strain. What is the order of these markers on the circular chromosome of the original $F^+$?
-
-`r latex.only("\\vspace{16cm}")`
+`r latex.only("\\vspace{8cm}")`
 
 ::::
 
 :::: {.blackbox data-latex=""}
 
-25. You are given two strains of _E. coli_. The Hfr strain is $arg^+ ala^+ glu^+ pro^+ leu^+ T^s$; the $F^-$ strain is $arg^- ala^- glu^- pro^- leu^- T^r$. All the markers are nutritional except T, which determines sensitivity or resistance to phage T1. The order of entry is as given, with $arg^+$ entering the recipient first and $T^s$ last. You find that the $F^-$ strain dies when exposed to penicillin ($pen^s$), but the Hfr strain does not ($pen^r$). How would you locate the locus for _pen_ on the bacterial chromosome with respect to _arg, ala, glu, pro_, and _leu_? Formulate your answer in logical, well-explained steps and draw explicit diagrams where possible.
+33. The cDNA clone for the human gene encoding tyrosinase was radioactively labeled and used in a Southern analysis of _EcoRI_-digested genomic DNA of wild-type mice. Three mouse fragments were found to be radioactive (were bound by the probe). When albino mice were used in this Southern analysis, no genomic fragments bound to the probe. Explain these results in relation to the nature of the wild-type and mutant mouse alleles.
+
+
+`r latex.only("\\vspace{19cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+34. Transgenic tobacco plants were obtained in which the vector Ti plasmid was designed to insert the gene of interest plus an adjacent kanamycin-resistance gene. The inheritance of chromosomal insertion was followed by testing progeny for kanamycin resistance. Two plants typified the results obtained generally. When plant 1 was backcrossed with wild-type tobacco, 50 percent of the progeny were kanamycin resistant and 50 percent were sensitive. When plant 2 was backcrossed with the wild type, 75 percent of the progeny were kanamycin resistant and 25 percent were sensitive. What must have been the difference between the two transgenic plants? What would you predict about the situation regarding the gene of interest?
+
+
+`r latex.only("\\vspace{17cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+35. A cystic-fibrosis mutation in a certain pedigree is due to a single nucleotide-pair change. This change destroys an _EcoRI_ restriction site normally found in this position. How would you use this information in counseling members of this family about their likelihood of being carriers? State the precise experiments needed. Assume that you find that a woman in this family is a carrier, and it transpires that she is married to an unrelated man who also is a heterozygote for cystic fibrosis, but, in his case, it is a different mutation in the same gene. How would you counsel this couple about the risks of a child’s having cystic fibrosis?
 
 `r latex.only("\\vspace{18cm}")`
 
@@ -260,103 +371,32 @@ All these Hfr strains are derived from the same $F^-$ strain. What is the order 
 
 :::: {.blackbox data-latex=""}
 
-28. A particular Hfr strain normally transmits the $pro^+$ marker as the last one in conjugation. In a cross of this strain with an $F^-$ strain, some $pro^+$ recombinants are recovered early in the mating process. When these $pro^+$ cells are mixed with $F^-$ cells, the majority of the $F^-$ cells are converted into $pro^+$ cells that also carry the F factor. Explain these results.
+36. Bacterial glucuronidase converts a colorless substance called X-Gluc into a bright blue indigo pigment. The gene for glucuronidase also works in plants if given a plant promoter region. How would you use this gene as a reporter gene to find the tissues in which a plant gene that you have just cloned is normally active? (Assume that X-Gluc is easily taken up by the plant tissues.)
+
 
 `r latex.only("\\vspace{19cm}")`
 
 ::::
 
-
 :::: {.blackbox data-latex=""}
 
-31. Five Hfr strains A through E are derived from a single $F^+$ strain of _E. coli_. The following chart shows the entry times of the first five markers into an $F^-$ strain when each is used in an interrupted-conjugation experiment:
+37. The plant _Arabidopsis thaliana_ was transformed by using the Ti plasmid into which a kanamycin-resistance gene had been inserted in the T-DNA region. Two kanamycin-resistant colonies (A and B) were selected, and plants were regenerated from them. The plants were allowed to self-pollinate, and the results were as follows:
 
 \
 
-```{r, echo=FALSE, fig.align='center', out.width="85%"}
+Plant A selfed → 3/4 progeny resistant to kanamycin; 1/4 progeny sensitive to kanamycin
 
-knitr::include_graphics(path = "input/q34.png")
-
-```
-
-`r alpha.list(optnum = 3, opta = " Draw a map of the F+ strain, indicating the positions of all genes and their distances apart in minutes.", optb = "Show the insertion point and orientation of the F plasmid in each Hfr strain.", optc = "In the use of each of these Hfr strains, state which allele you would select to obtain the highest proportion of Hfr exconjugants.")`
-
-`r latex.only("\\vspace{13cm}")`
-
-::::
-
-
-:::: {.blackbox data-latex=""}
-
-34. _E. coli_ cells were infected with two strains of T4 virus. One strain is minute (_m_), rapid lysis (_r_), and turbid (_t_); the other is wild type for all three markers. The lytic products of this infection were plated and classified. The resulting 10,343 plaques were distributed among eight genotypes as follows:
+Plant B selfed → 5/16 progeny resistant to kanamycin; 1/16 progeny sensitive to kanamycin
 
 \
 
-| Genotypes |  Plaques |
-| --------- | -------- |
-|   m r t   |   3469   |
-|   + + +   |   3727   |
-|   m r +   |    854   | 
-|   m + t   |    163   |
-|   m + +   |    521   |
-|   + r t   |    475   | 
-|   + r +   |    171   |
-|   + + t   |    963   |
+a. Draw the relevant plant chromosomes in both plants.
 
-`r alpha.list (optnum = 3, opta = "What are the linkage distances between m and r, between r and t, and between m and t?", optb = "Determine the linkage order for the three genes.", optc = "What is the coefficient of coincidence (see Chapter 4) in this cross? What does it signify?")`
-
-`r latex.only("\\vspace{11cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-40. Deduce the genotypes of the following _E. coli_ strains 1 through 4:
+b. Explain the two different ratios.
 
 \
 
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
 
-knitr::include_graphics(path = "input/problem_05_40.jpg")
-
-```
-
-`r latex.only("\\vspace{12cm}")`
+`r latex.only("\\vspace{16cm}")`
 
 ::::
-
-:::: {.blackbox data-latex=""}
-
-47. A bacterial transformation is performed with a donor strain that is resistant to four drugs: A, B, C, and D, and a recipient strain that is sensitive to all four drugs. The resulting recipient cell population is divided and plated on media containing various combinations of the drugs. The following table shows the results.
-
-\
-
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
-
-knitr::include_graphics(path = "input/q47.png")
-
-```
-
-`r alpha.list(optnum = 2, opta = "One of the genes is distant from the other three, which appear to be closely linked. Which is the distant gene?", optb = "What is the likely order of the three closely linked genes?")`
-
-`r latex.only("\\vspace{12cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-50. A generalized transducing phage is used to transduce an $a^- b^- c^- d^- e^-$ recipient strain of _E. coli_ with an $a^+ b^+ c^+ d^+ e^+$ donor. The recipient culture is plated on various media with the results shown in the following table. (Note that $a^-$ indicates a requirement for A as a nutrient, and so forth.) What can you conclude about the linkage and order of the genes?
-
-\
-
-```{r, echo=FALSE, fig.align='center', out.width="65%"}
-
-knitr::include_graphics(path = "input/q50.png")
-
-```
-
-
-`r latex.only("\\vspace{11cm}")`
-
-::::
-
