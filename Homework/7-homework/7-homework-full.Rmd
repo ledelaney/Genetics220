@@ -1,6 +1,6 @@
 ---
-title: "Chapters 12 & 10 Homework"
-subtitle: "Ch.12: 2, 3, 6, 7, 13, 19, 24, 36; Ch. 10: 14, 15, 17, 18, 25, 32-37"
+title: "Chapters 11 & 12 Homework"
+subtitle: "Ch.11: 3, 8, 9, 11, 13, 21; Ch.12: 2, 3, 6, 7, 13, 19, 24, 36"
 author: "L E Delaney"
 output:
   pdf_document:
@@ -172,6 +172,80 @@ bold.fix <- function(mytext, output = myoutput){
 
 :::: {.blackbox data-latex=""}
 
+3. Why do promoter mutations cluster at positions –10 and –35 as shown in Figure 11-11?
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="75%"}
+
+knitr::include_graphics(path = "input/figure_11_11.jpg")
+
+```
+
+`r latex.only("\\vspace{15cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+8. Explain why $I^-$ alleles in the lac system are normally recessive to $I^+$ alleles and why $I^+$ alleles are
+recessive to $I^S$ alleles.
+
+
+`r latex.only("\\vspace{20cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+9. What do we mean when we say that $O^C$ mutations in the _lac_ system are cis-acting?
+
+
+`r latex.only("\\vspace{20cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+11. The map of the lac operon is POZY.
+
+The promoter (_P_) region is the start site of transcription through the binding of the RNA polymerase molecule before actual mRNA production. Mutationally altered promoters ($P^-$) apparently cannot bind the RNA polymerase molecule. Certain predictions can be made about the effect of P– mutations. Use your predictions and your knowledge of the lactose system to complete the following table. Insert a "+" where an enzyme is produced and a "–" where no enzyme is produced. The first one has been done as an example.
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="85%"}
+
+knitr::include_graphics(path = "input/q11.png")
+
+```
+
+
+`r latex.only("\\vspace{11cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+13. Mutants that are $lacY^-$ retain the capacity to synthesize $\beta$-galactosidase. However, even though the _lacI_ gene is still intact, $\beta$-galactosidase can no longer be induced by adding lactose to the medium. Explain.
+
+
+`r latex.only("\\vspace{17cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+21. You are studying the properties of a new kind of regulatory mutation of the lactose operon. This mutation, called _S_, leads to the complete repression of the _lacZ_, _lacY_, and _lacA_ genes, regardless of whether inducer (lactose) is present. The results of studies of this mutation in partial diploids demonstrate that this mutation is completely dominant over wild type. When you treat bacteria of the _S_ mutant strain with a mutagen and select for mutant bacteria that can express the enzymes encoded by _lacZ_, _lacY_, and _lacA_ genes in the presence of lactose, some of the mutations map to the _lac_ operator region and others to the _lac_ repressor gene. On the basis of your knowledge of the lactose operon, provide a molecular genetic explanation for all these properties of the _S_ mutation. Include an explanation of the constitutive nature of the "reverse mutations."
+
+
+`r latex.only("\\vspace{17cm}")`
+
+::::
+
+
+
+:::: {.blackbox data-latex=""}
+
 2. Based on the information in Figure 12-6, how does Gal4 regulate four different _GAL_ genes at the same time? Contrast this mechanism with how the Lac repressor controls the expression of three genes.
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
@@ -280,123 +354,5 @@ g. Deletion of the GAL3 gene
 36. Null alleles (mutant genes) produce no protein product. This is a genetic change. However, epigenetically silenced genes also produce no protein product. How does one determine experimentally whether a gene has been silenced by mutation or has been silenced epigenetically?
 
 `r latex.only("\\vspace{19cm}")`
-
-::::
-
-
-:::: {.blackbox data-latex=""}
-
-14. Why is ligase needed to make recombinant DNA? What would be the immediate consequence in the cloning process if someone forgot to add it?
-
-`r latex.only("\\vspace{20cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-15. In the PCR process, if we assume that each cycle takes 5 minutes, how many-fold amplification would be accomplished in 1 hour?
-
-`r latex.only("\\vspace{20cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-17. You obtain the DNA sequence of a mutant of a 2-kb gene in which you are interested and it shows base differences at three positions, all in different codons. One is a silent change, but the other two are missense changes (they encode new amino acids). How would you demonstrate that these changes are real mutations and not sequencing errors? (Assume that sequencing is about 99.9 percent accurate.)
-
-`r latex.only("\\vspace{19cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-18. In a T-DNA transformation of a plant with a transgene from a fungus (not found in plants), the presumptive transgenic plant does not express the expected phenotype of the transgene. How would you demonstrate that the transgene is in fact present? How would you demonstrate that the transgene was expressed?
-
-
-`r latex.only("\\vspace{19cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-25. In yeast, you have sequenced a piece of wild-type DNA and it clearly contains a gene, but you do not know what gene it is. Therefore, to investigate further, you would like to find out its mutant phenotype. How would you use the cloned wild-type gene to do so? Show your experimental steps clearly.
-
-`r latex.only("\\vspace{19cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-32. A cloned fragment of DNA was sequenced by using the dideoxy chain-termination method. A part of the autoradiogram of the sequencing gel is represented here.
-
-\
-
-```{r, echo=FALSE, fig.align='center', out.width="45%"}
-
-knitr::include_graphics(path = "input/problem_10_32.jpg")
-
-```
-
-`r alpha.list(optnum = 3, opta = "Deduce the nucleotide sequence of the DNA nucleotide chain synthesized from the primer. Label the 5' and 3' ends.", optb = "Deduce the nucleotide sequence of the DNA nucleotide chain used as the template strand. Label the 5' and 3' ends.", optc = "Write out the nucleotide sequence of the DNA double helix (label the 5' and 3' ends).")`
-
-`r latex.only("\\vspace{8cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-33. The cDNA clone for the human gene encoding tyrosinase was radioactively labeled and used in a Southern analysis of _EcoRI_-digested genomic DNA of wild-type mice. Three mouse fragments were found to be radioactive (were bound by the probe). When albino mice were used in this Southern analysis, no genomic fragments bound to the probe. Explain these results in relation to the nature of the wild-type and mutant mouse alleles.
-
-
-`r latex.only("\\vspace{19cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-34. Transgenic tobacco plants were obtained in which the vector Ti plasmid was designed to insert the gene of interest plus an adjacent kanamycin-resistance gene. The inheritance of chromosomal insertion was followed by testing progeny for kanamycin resistance. Two plants typified the results obtained generally. When plant 1 was backcrossed with wild-type tobacco, 50 percent of the progeny were kanamycin resistant and 50 percent were sensitive. When plant 2 was backcrossed with the wild type, 75 percent of the progeny were kanamycin resistant and 25 percent were sensitive. What must have been the difference between the two transgenic plants? What would you predict about the situation regarding the gene of interest?
-
-
-`r latex.only("\\vspace{17cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-35. A cystic-fibrosis mutation in a certain pedigree is due to a single nucleotide-pair change. This change destroys an _EcoRI_ restriction site normally found in this position. How would you use this information in counseling members of this family about their likelihood of being carriers? State the precise experiments needed. Assume that you find that a woman in this family is a carrier, and it transpires that she is married to an unrelated man who also is a heterozygote for cystic fibrosis, but, in his case, it is a different mutation in the same gene. How would you counsel this couple about the risks of a child’s having cystic fibrosis?
-
-`r latex.only("\\vspace{18cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-36. Bacterial glucuronidase converts a colorless substance called X-Gluc into a bright blue indigo pigment. The gene for glucuronidase also works in plants if given a plant promoter region. How would you use this gene as a reporter gene to find the tissues in which a plant gene that you have just cloned is normally active? (Assume that X-Gluc is easily taken up by the plant tissues.)
-
-
-`r latex.only("\\vspace{19cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-37. The plant _Arabidopsis thaliana_ was transformed by using the Ti plasmid into which a kanamycin-resistance gene had been inserted in the T-DNA region. Two kanamycin-resistant colonies (A and B) were selected, and plants were regenerated from them. The plants were allowed to self-pollinate, and the results were as follows:
-
-\
-
-Plant A selfed → 3/4 progeny resistant to kanamycin; 1/4 progeny sensitive to kanamycin
-
-Plant B selfed → 5/16 progeny resistant to kanamycin; 1/16 progeny sensitive to kanamycin
-
-\
-
-a. Draw the relevant plant chromosomes in both plants.
-
-b. Explain the two different ratios.
-
-\
-
-
-`r latex.only("\\vspace{16cm}")`
 
 ::::

@@ -1,6 +1,6 @@
 ---
-title: "Chapters 9 & 11 Homework"
-subtitle: "Ch. 9: 12, 13, 17, 18, 20, 21a, 24, 27, 35, 40; Ch.11: 3, 8, 9, 11, 13, 21"
+title: "Chapter 9 Homework"
+subtitle: "Ch. 9: 12, 13, 17, 18, 20, 21a, 24, 27, 35, 40"
 author: "L E Delaney"
 output:
   pdf_document:
@@ -313,76 +313,3 @@ What is the molecular basis for each mutation? What is the DNA sequence that spe
 `r latex.only("\\vspace{12cm}")`
 
 ::::
-
-:::: {.blackbox data-latex=""}
-
-3. Why do promoter mutations cluster at positions –10 and –35 as shown in Figure 11-11?
-
-\
-
-```{r, echo=FALSE, fig.align='center', out.width="75%"}
-
-knitr::include_graphics(path = "input/figure_11_11.jpg")
-
-```
-
-`r latex.only("\\vspace{15cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-8. Explain why $I^-$ alleles in the lac system are normally recessive to $I^+$ alleles and why $I^+$ alleles are
-recessive to $I^S$ alleles.
-
-
-`r latex.only("\\vspace{20cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-9. What do we mean when we say that $O^C$ mutations in the _lac_ system are cis-acting?
-
-
-`r latex.only("\\vspace{20cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-11. The map of the lac operon is POZY.
-
-The promoter (_P_) region is the start site of transcription through the binding of the RNA polymerase molecule before actual mRNA production. Mutationally altered promoters ($P^-$) apparently cannot bind the RNA polymerase molecule. Certain predictions can be made about the effect of P– mutations. Use your predictions and your knowledge of the lactose system to complete the following table. Insert a "+" where an enzyme is produced and a "–" where no enzyme is produced. The first one has been done as an example.
-
-\
-
-```{r, echo=FALSE, fig.align='center', out.width="85%"}
-
-knitr::include_graphics(path = "input/q11.png")
-
-```
-
-
-`r latex.only("\\vspace{11cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-13. Mutants that are $lacY^-$ retain the capacity to synthesize $\beta$-galactosidase. However, even though the _lacI_ gene is still intact, $\beta$-galactosidase can no longer be induced by adding lactose to the medium. Explain.
-
-
-`r latex.only("\\vspace{17cm}")`
-
-::::
-
-:::: {.blackbox data-latex=""}
-
-21. You are studying the properties of a new kind of regulatory mutation of the lactose operon. This mutation, called _S_, leads to the complete repression of the _lacZ_, _lacY_, and _lacA_ genes, regardless of whether inducer (lactose) is present. The results of studies of this mutation in partial diploids demonstrate that this mutation is completely dominant over wild type. When you treat bacteria of the _S_ mutant strain with a mutagen and select for mutant bacteria that can express the enzymes encoded by _lacZ_, _lacY_, and _lacA_ genes in the presence of lactose, some of the mutations map to the _lac_ operator region and others to the _lac_ repressor gene. On the basis of your knowledge of the lactose operon, provide a molecular genetic explanation for all these properties of the _S_ mutation. Include an explanation of the constitutive nature of the "reverse mutations."
-
-
-`r latex.only("\\vspace{17cm}")`
-
-::::
-
