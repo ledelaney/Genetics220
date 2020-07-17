@@ -1,0 +1,257 @@
+---
+title: "Chapter 8 Homework"
+subtitle: "Ch. 8: 11, 14-16, 20-22"
+author: "L E Delaney"
+output:
+  pdf_document:
+      template: input/template-landscape.tex
+      keep_tex: false 
+      latex_engine: xelatex
+  html_document:
+    highlight: tango
+    theme: cosmo
+    toc: true
+    toc_float: true
+documentclass: "article"
+fontsize: 11pt
+geometry_options: margin = 0.7in
+linestretch: 1
+---
+```{r setup, echo=FALSE, eval=TRUE, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, out.extra = "")
+library(tidyverse)
+
+myoutput <- "latex"
+#myoutput <- "html"
+
+#For alpha lists
+alpha.list <- function(optnum = 3, opta, optb, optc, optd, output = myoutput){
+  
+  if(output == "html"){
+    if(optnum == 3){
+   a <- paste("<ol type='a'>", 
+       "\n", 
+       "<li>",opta,"</li>", 
+       "\n", 
+       "<li>",optb,"</li>", 
+       "\n", 
+       "<li>",optc,"</li>", 
+       "\n","</ol>", sep = " ") %>%
+     noquote()}
+    else if(optnum == 2){
+         a <- paste("<ol type='a'>", 
+       "\n", 
+       "<li>",opta,"</li>", 
+       "\n", 
+       "<li>",optb,"</li>", 
+       "\n","</ol>", sep = " ") %>%
+     noquote()
+      
+    }
+    
+     else if(optnum == 4){
+        a <- paste("<ol type='a'>", 
+       "\n", 
+       "<li>",opta,"</li>", 
+       "\n", 
+       "<li>",optb,"</li>", 
+       "\n", 
+       "<li>",optc,"</li>",
+       "\n", 
+       "<li>",optd,"</li>",
+       "\n","</ol>", sep = " ") %>%
+             
+     noquote()
+      
+    }
+   
+   return(a)
+    
+  }
+  
+  else if(output == "latex"){
+    if(optnum == 3){
+    b <- paste("\\begin{enumerate}", 
+       "\n", 
+       "\\item[a.]{",opta,"}", 
+       "\n", 
+       "\\item[b.]{",optb,"}", 
+       "\n", 
+       "\\item[c.]{",optc,"}", 
+       "\n","\\end{enumerate}", sep = " ") %>%
+      noquote()}
+    else if(optnum == 2){
+      b <- paste("\\begin{enumerate}", 
+       "\n", 
+       "\\item[a.]{",opta,"}", 
+       "\n", 
+       "\\item[b.]{",optb,"}", 
+       "\n","\\end{enumerate}", sep = " ") %>%
+      noquote()
+      
+    }
+    
+    else if(optnum == 4){
+    b <- paste("\\begin{enumerate}", 
+       "\n", 
+       "\\item[a.]{",opta,"}", 
+       "\n", 
+       "\\item[b.]{",optb,"}", 
+       "\n", 
+       "\\item[c.]{",optc,"}", 
+       "\n", 
+       "\\item[d.]{",optd,"}", 
+       "\n","\\end{enumerate}", sep = " ") %>%
+      noquote()}
+    
+    return(b)
+  }
+  
+}
+
+latex.only <- function(mytext, output = myoutput){
+  
+  if(output == "html"){
+    return(NULL)
+  }
+  
+  else if(output == "latex"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(NULL)
+    
+  }
+}
+
+html.only <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    return(NULL)
+  }
+  
+  else if(output == "html"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(NULL)
+    
+  }
+}
+
+
+bold.fix <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\textbf{", mytext, "}") %>%
+      noquote()
+    
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0("<strong>", mytext, "</strong>") %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(mytext)
+    
+  }
+}
+
+italic.fix <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\textit{", mytext, "}") %>%
+      noquote()
+    
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0("<em>", mytext, "</em>") %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(mytext)
+    
+  }
+}
+
+
+```
+
+:::: {.blackbox data-latex=""}
+
+11. In prokaryotes and eukaryotes, describe what else is happening to the RNA while RNA polymerase is synthesizing a transcript from the DNA template.
+
+`r latex.only("\\vspace{13cm}")`
+
+::::
+
+
+:::: {.blackbox data-latex=""}
+
+14. You have identified a mutation in yeast, a unicellular eukaryote, that prevents the capping of the 5' end of the RNA transcript. However, much to your surprise, all the enzymes required for capping are normal. You determine that the mutation is, instead, in one of the subunits of RNA polymerase II. Which subunit is mutant and how does this mutation result in failure to add a cap to yeast RNA?
+
+
+`r latex.only("\\vspace{13cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+15. Why is RNA produced only from the template DNA strand and not from both strands?
+
+
+`r latex.only("\\vspace{13cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+16. A linear plasmid contains only two genes, which are transcribed in opposite directions, each one from the end, toward the center of the plasmid. Draw diagrams of the:
+
+`r alpha.list (optnum = 4, opta = "plasmid DNA, showing the 5' and 3' ends of the nucleotide strands.", optb = "template strand for each gene.", optc = "positions of the transcription-initiation site.", optd = "transcripts, showing the 5' and 3' ends.")`
+
+`r latex.only("\\vspace{13cm}")`
+
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+20. You will learn more about genetic engineering in Chapter 10, but for now, put on your genetic engineer’s cap and try to solve this problem. _E. coli_ is widely used in laboratories to produce proteins from other organisms.
+
+`r alpha.list (optnum = 2, opta = "You have isolated a yeast gene that encodes a metabolic enzyme and want to produce this enzyme in \\textit{E. coli}. You suspect that the yeast promoter will not work in \\textit{E. coli}. Why?", optb = "After replacing the yeast promoter with an \\textit{E. coli} promoter, you are pleased to detect RNA from the yeast gene but are confused because the RNA is almost twice the length of the mRNA from this gene isolated from yeast. Explain why this result might have occurred.")`
+
+
+`r latex.only("\\vspace{13cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+21. Draw a prokaryotic gene and its RNA product. Be sure to include the promoter, transcription start site, transcription termination site, untranslated regions, and labeled 5' and 3' ends.
+
+`r latex.only("\\vspace{13cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+22. Draw a two-intron eukaryotic gene and its pre-mRNA and mRNA products. Be sure to include all the features of the prokaryotic gene included in your answer to Problem 19, plus the processing events required to produce the mRNA.
+
+`r latex.only("\\vspace{13cm}")`
+
+::::
