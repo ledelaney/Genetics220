@@ -1,0 +1,358 @@
+---
+title: "Chapters 11 & 12 Homework"
+subtitle: "Ch.11: 3, 8, 9, 11, 13, 21; Ch.12: 2, 3, 6, 7, 13, 19, 24, 36"
+author: "L E Delaney"
+output:
+  pdf_document:
+      template: input/template-landscape.tex
+      keep_tex: false 
+      latex_engine: xelatex
+  html_document:
+    highlight: tango
+    theme: cosmo
+    toc: true
+    toc_float: true
+documentclass: "article"
+fontsize: 11pt
+geometry_options: margin = 0.8in
+linestretch: 1
+---
+```{r setup, echo=FALSE, eval=TRUE, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, out.extra = "")
+library(tidyverse)
+
+myoutput <- "latex"
+#myoutput <- "html"
+
+#For alpha lists
+alpha.list <- function(optnum = 3, opta, optb, optc, optd, output = myoutput){
+  
+  if(output == "html"){
+    if(optnum == 3){
+   a <- paste("<ol type='a'>", 
+       "\n", 
+       "<li>",opta,"</li>", 
+       "\n", 
+       "<li>",optb,"</li>", 
+       "\n", 
+       "<li>",optc,"</li>", 
+       "\n","</ol>", sep = " ") %>%
+     noquote()}
+    else if(optnum == 2){
+         a <- paste("<ol type='a'>", 
+       "\n", 
+       "<li>",opta,"</li>", 
+       "\n", 
+       "<li>",optb,"</li>", 
+       "\n","</ol>", sep = " ") %>%
+     noquote()
+      
+    }
+    
+     else if(optnum == 4){
+        a <- paste("<ol type='a'>", 
+       "\n", 
+       "<li>",opta,"</li>", 
+       "\n", 
+       "<li>",optb,"</li>", 
+       "\n", 
+       "<li>",optc,"</li>",
+       "\n", 
+       "<li>",optd,"</li>",
+       "\n","</ol>", sep = " ") %>%
+             
+     noquote()
+      
+    }
+   
+   return(a)
+    
+  }
+  
+  else if(output == "latex"){
+    if(optnum == 3){
+    b <- paste("\\begin{enumerate}", 
+       "\n", 
+       "\\item[a.]{",opta,"}", 
+       "\n", 
+       "\\item[b.]{",optb,"}", 
+       "\n", 
+       "\\item[c.]{",optc,"}", 
+       "\n","\\end{enumerate}", sep = " ") %>%
+      noquote()}
+    else if(optnum == 2){
+      b <- paste("\\begin{enumerate}", 
+       "\n", 
+       "\\item[a.]{",opta,"}", 
+       "\n", 
+       "\\item[b.]{",optb,"}", 
+       "\n","\\end{enumerate}", sep = " ") %>%
+      noquote()
+      
+    }
+    
+    else if(optnum == 4){
+    b <- paste("\\begin{enumerate}", 
+       "\n", 
+       "\\item[a.]{",opta,"}", 
+       "\n", 
+       "\\item[b.]{",optb,"}", 
+       "\n", 
+       "\\item[c.]{",optc,"}", 
+       "\n", 
+       "\\item[d.]{",optd,"}", 
+       "\n","\\end{enumerate}", sep = " ") %>%
+      noquote()}
+    
+    return(b)
+  }
+  
+}
+
+latex.only <- function(mytext, output = myoutput){
+  
+  if(output == "html"){
+    return(NULL)
+  }
+  
+  else if(output == "latex"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(NULL)
+    
+  }
+}
+
+html.only <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    return(NULL)
+  }
+  
+  else if(output == "html"){
+    b <- paste0(mytext) %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(NULL)
+    
+  }
+}
+
+
+bold.fix <- function(mytext, output = myoutput){
+  
+  if(output == "latex"){
+    a <- paste0("\\textbf{", mytext, "}") %>%
+      noquote()
+    
+    return(a)
+  }
+  
+  else if(output == "html"){
+    b <- paste0("<strong>", mytext, "</strong>") %>%
+      noquote()
+    return(b)
+  }
+  
+  else if(output == "word"){
+    return(mytext)
+    
+  }
+}
+
+
+```
+
+:::: {.blackbox data-latex=""}
+
+3. Why do promoter mutations cluster at positions –10 and –35 as shown in Figure 11-11?
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="75%"}
+
+knitr::include_graphics(path = "input/figure_11_11.jpg")
+
+```
+
+`r latex.only("\\vspace{7cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+8. Explain why $I^-$ alleles in the lac system are normally recessive to $I^+$ alleles and why $I^+$ alleles are
+recessive to $I^S$ alleles.
+
+
+`r latex.only("\\vspace{6.5cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+9. What do we mean when we say that $O^C$ mutations in the _lac_ system are cis-acting?
+
+
+`r latex.only("\\vspace{6.5cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+11. The map of the lac operon is POZY.
+
+The promoter (_P_) region is the start site of transcription through the binding of the RNA polymerase molecule before actual mRNA production. Mutationally altered promoters ($P^-$) apparently cannot bind the RNA polymerase molecule. Certain predictions can be made about the effect of P– mutations. Use your predictions and your knowledge of the lactose system to complete the following table. Insert a "+" where an enzyme is produced and a "–" where no enzyme is produced. The first one has been done as an example.
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="85%"}
+
+knitr::include_graphics(path = "input/q11.png")
+
+```
+
+
+`r latex.only("\\vspace{5cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+13. Mutants that are $lacY^-$ retain the capacity to synthesize $\beta$-galactosidase. However, even though the _lacI_ gene is still intact, $\beta$-galactosidase can no longer be induced by adding lactose to the medium. Explain.
+
+
+`r latex.only("\\vspace{10cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+21. You are studying the properties of a new kind of regulatory mutation of the lactose operon. This mutation, called _S_, leads to the complete repression of the _lacZ_, _lacY_, and _lacA_ genes, regardless of whether inducer (lactose) is present. The results of studies of this mutation in partial diploids demonstrate that this mutation is completely dominant over wild type. When you treat bacteria of the _S_ mutant strain with a mutagen and select for mutant bacteria that can express the enzymes encoded by _lacZ_, _lacY_, and _lacA_ genes in the presence of lactose, some of the mutations map to the _lac_ operator region and others to the _lac_ repressor gene. On the basis of your knowledge of the lactose operon, provide a molecular genetic explanation for all these properties of the _S_ mutation. Include an explanation of the constitutive nature of the "reverse mutations."
+
+
+`r latex.only("\\vspace{10cm}")`
+
+::::
+
+
+
+:::: {.blackbox data-latex=""}
+
+2. Based on the information in Figure 12-6, how does Gal4 regulate four different _GAL_ genes at the same time? Contrast this mechanism with how the Lac repressor controls the expression of three genes.
+
+```{r, echo=FALSE, fig.align='center', out.width="75%"}
+
+knitr::include_graphics(path = "input/figure_12_06.jpg")
+
+```
+
+
+`r latex.only("\\vspace{8cm}")`
+
+::::
+
+
+:::: {.blackbox data-latex=""}
+
+3. In any experiment, controls are essential in order to determine the specific effect of changing some parameter. In Figure 12-7, which constructs are the "controls" that serve to establish the principle that activation domains are modular and interchangeable?
+
+```{r, echo=FALSE, fig.align='center', out.width="35%"}
+
+knitr::include_graphics(path = "input/figure_12_07.jpg")
+
+```
+
+
+`r latex.only("\\vspace{3cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+6. What is the conceptual connection between Figures 12-12 and 12-19?
+
+```{r, echo=FALSE, fig.show = "hold", out.width = "15%", fig.align = "default"}
+
+knitr::include_graphics(path = "input/figure_12_12.jpg")
+
+knitr::include_graphics(path = "input/figure_12_19.jpg")
+
+```
+
+
+`r latex.only("\\vspace{5cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+7. In Figure 12-19, where is the TATA box located before the enhanceosome forms at the top of the figure?
+
+\
+
+```{r, echo=FALSE, fig.align='center', out.width="25%"}
+
+knitr::include_graphics(path = "input/figure_12_19.jpg")
+
+```
+
+
+`r latex.only("\\vspace{3cm}")`
+
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+13. Predict and explain the effect on GAL1 transcription, in the presence of galactose alone, of the following mutations:
+
+a. Deletion of one Gal4-binding site in the GAL1 UAS element
+
+b. Deletion of all four Gal4-binding sites in the GAL1 UAS element
+
+c. Deletion of the Mig1-binding site upstream of GAL1 d. Deletion of the Gal4 activation domain.
+
+e. Deletion of the GAL80 gene
+
+f. Deletion of the GAL1 promoter
+
+g. Deletion of the GAL3 gene
+
+\
+
+`r latex.only("\\vspace{12cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+19. What is meant by the term _epigenetic inheritance_? What are two examples of such inheritance?
+
+`r latex.only("\\vspace{6cm}")`
+
+::::
+
+:::: {.blackbox data-latex=""}
+
+24. What is the fundamental difference in how bacterial and eukaryotic genes are regulated?
+
+`r latex.only("\\vspace{5cm}")`
+
+::::
+
+
+:::: {.blackbox data-latex=""}
+
+36. Null alleles (mutant genes) produce no protein product. This is a genetic change. However, epigenetically silenced genes also produce no protein product. How does one determine experimentally whether a gene has been silenced by mutation or has been silenced epigenetically?
+
+`r latex.only("\\vspace{7cm}")`
+
+::::
