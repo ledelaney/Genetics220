@@ -36,9 +36,9 @@ The Blackboard problem sets are available under [Quizzes and Blackboard Homework
 
 ## Quizzes
 
-Each week after discussion, you will take a quiz. It will be available for 10 minutes, from 3:40p-350p. Once you begin, you will have either 10 or 15 minutes to complete it, depending on the length of that particular quiz. Your grade will be available to view on Monday morning at 8am.
+Each week after discussion, you will take a quiz. It will be available for 10 minutes, from 3:40p-3:50p. Once you begin, you will have either 10 or 15 minutes to complete it, depending on the length of that particular quiz. Your grade will be available to view on Monday morning at 8am.
 
 Quizzes are also available under [Quizzes and Blackboard Homework Questions](https://uic.blackboard.com/webapps/blackboard/content/listContentEditable.jsp?content_id=_7104108_1&course_id=_158614_1&mode=reset).
 
-To view your quiz once grades are posted, hover over your grade on Blackboard, click the arrow, and select "View Grade Details".
+To view your quiz once grades are posted, hover over your grade on Blackboard, click the arrow, and select `View Grade Details`.
 
